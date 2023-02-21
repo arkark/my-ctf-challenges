@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "watch": "grip -b & GRIP=$! && deno run --watch --no-clear-screen --allow-read=generator/data --allow-write=README.md generator/main.ts; kill $GRIP",
+    "build": "deno run --allow-read=generator/data --allow-write=README.md generator/main.ts"
+  }
+}
