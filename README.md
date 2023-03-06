@@ -39,15 +39,15 @@ A repository for CTF challenges I created. It contains the source code, the solv
 
 |Challenge|Category|Solved|Difficulty|Repository|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|skipinx|web|102|★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/skipinx)|[link](https://blog.arkark.dev/2022/11/18/seccon-ja/#web-skipinx)|query parser|
-|easylfi|web|62|★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/easylfi)|[link](https://blog.arkark.dev/2022/11/18/seccon-ja/#web-easylfi)|LFI, curl|
-|bffcalc|web|41|★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/bffcalc)|[link](https://blog.arkark.dev/2022/11/18/seccon-ja/#web-bffcalc)|HTTP request splitting|
-|piyosay|web|19|★★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/piyosay)|[link](https://blog.arkark.dev/2022/11/18/seccon-ja/#web-piyosay)|Trusted Types, DOMPurify, RegExp|
-|denobox|web|1|★★★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/denobox)|[link](https://blog.arkark.dev/2022/11/18/seccon-ja/#web-denobox)|prototype pollution, import maps	|
-|spanote|web|1|★★★★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/spanote)|[link](https://blog.arkark.dev/2022/11/18/seccon-ja/#web-spanote)|Chrome, disk cache, bfcache|
-|latexipy|misc|8|★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/latexipy)|[link](https://blog.arkark.dev/2022/11/18/seccon-ja/#misc-latexipy)|pyjail, magic comment|
-|txtchecker|misc|23|★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/txtchecker)|[link](https://blog.arkark.dev/2022/11/18/seccon-ja/#misc-txtchecker)|magic file, ReDoS|
-|noiseccon|misc|22|★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/noiseccon)|[link](https://blog.arkark.dev/2022/11/18/seccon-ja/#misc-noiseccon)|Perlin noise|
+|skipinx|web|102|★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/skipinx)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-skipinx)|query parser|
+|easylfi|web|62|★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/easylfi)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-easylfi)|LFI, curl|
+|bffcalc|web|41|★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/bffcalc)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-bffcalc)|HTTP request splitting|
+|piyosay|web|19|★★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/piyosay)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-piyosay)|Trusted Types, DOMPurify, RegExp|
+|denobox|web|1|★★★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/denobox)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-denobox)|prototype pollution, import maps	|
+|spanote|web|1|★★★★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/spanote)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-spanote)|Chrome, disk cache, bfcache|
+|latexipy|misc|8|★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/latexipy)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#misc-latexipy)|pyjail, magic comment|
+|txtchecker|misc|23|★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/txtchecker)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#misc-txtchecker)|magic file, ReDoS|
+|noiseccon|misc|22|★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/noiseccon)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#misc-noiseccon)|Perlin noise|
 
 ## SECCON CTF 2021
 
