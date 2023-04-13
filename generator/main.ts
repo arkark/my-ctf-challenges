@@ -28,7 +28,7 @@ const genCtfSection = function* (ctf: Ctf) {
   yield "### Links";
   yield "";
   for (const link of ctf.links) {
-    yield `- ${link.label}: ${link.url}`;
+    yield `- [${link.label}](${link.url})`;
   }
   yield "";
 

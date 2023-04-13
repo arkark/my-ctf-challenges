@@ -2,18 +2,19 @@ import type Ctf from "../Ctf.ts";
 
 const ctf: Ctf = {
   name: "SECCON CTF 2021",
+  description: "Sat, 11 Dec. 2021, 05:00 UTC — Sun, 12 Dec. 2021, 05:00 UTC",
   links: [
     {
-      label: "My writeups",
-      url: "https://blog.arkark.dev/2021/12/22/seccon/",
+      label: "ctftime",
+      url: "https://ctftime.org/event/1458",
     },
     {
       label: "Repository",
       url: "https://github.com/SECCON/SECCON2021_online_CTF",
     },
     {
-      label: "ctftime",
-      url: "https://ctftime.org/event/1458",
+      label: "My writeups",
+      url: "https://blog.arkark.dev/2021/12/22/seccon/",
     },
   ],
   columns: [

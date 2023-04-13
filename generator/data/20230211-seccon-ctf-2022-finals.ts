@@ -2,15 +2,8 @@ import type Ctf from "../Ctf.ts";
 
 const ctf: Ctf = {
   name: "SECCON CTF 2022 Finals",
+  description: "Sat, 11 Feb. 2023, 01:00 UTC — Sun, 12 Feb. 2023, 09:00 UTC",
   links: [
-    {
-      label: "My writeups",
-      url: "https://blog.arkark.dev/2023/02/17/seccon-finals/",
-    },
-    {
-      label: "Repository",
-      url: "TODO (It will be published by SECCON)",
-    },
     {
       label: "ctftime (International)",
       url: "https://ctftime.org/event/1864",
@@ -18,6 +11,14 @@ const ctf: Ctf = {
     {
       label: "ctftime (Domestic)",
       url: "https://ctftime.org/event/1863",
+    },
+    {
+      label: "Repository",
+      url: "https://github.com/SECCON/SECCON2022_final_CTF",
+    },
+    {
+      label: "My writeups",
+      url: "https://blog.arkark.dev/2023/02/17/seccon-finals/",
     },
   ],
   columns: [
@@ -38,7 +39,7 @@ const ctf: Ctf = {
       "4",
       "★",
       new URL(
-        "https://github.com/arkark/seccon-ctf-2022-finals-web/tree/main/web/babybox"
+        "https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/babybox"
       ),
       new URL(
         "https://blog.arkark.dev/2023/02/17/seccon-finals/#web-100-babybox"
@@ -52,7 +53,7 @@ const ctf: Ctf = {
       "8",
       "★",
       new URL(
-        "https://github.com/arkark/seccon-ctf-2022-finals-web/tree/main/web/easylfi2"
+        "https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/easylfi2"
       ),
       new URL(
         "https://blog.arkark.dev/2023/02/17/seccon-finals/#web-200-easylfi2"
@@ -66,7 +67,7 @@ const ctf: Ctf = {
       "1",
       "★★★",
       new URL(
-        "https://github.com/arkark/seccon-ctf-2022-finals-web/tree/main/web/maas"
+        "https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/maas"
       ),
       new URL("https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-MaaS"),
       "newline normalization, CSP bypass",
@@ -78,7 +79,7 @@ const ctf: Ctf = {
       "0",
       "★★★",
       new URL(
-        "https://github.com/arkark/seccon-ctf-2022-finals-web/tree/main/web/light-note"
+        "https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/light-note"
       ),
       new URL(
         "https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-light-note"
@@ -92,7 +93,7 @@ const ctf: Ctf = {
       "0",
       "★★★★",
       new URL(
-        "https://github.com/arkark/seccon-ctf-2022-finals-web/tree/main/web/dark-note"
+        "https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/dark-note"
       ),
       new URL(
         "https://blog.arkark.dev/2023/02/17/seccon-finals/#web-500-dark-note"
