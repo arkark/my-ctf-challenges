@@ -5,7 +5,7 @@ const ctf: Ctf = {
   description: "Sat, 12 Nov. 2022, 05:00 UTC — Sun, 13 Nov. 2022, 05:00 UTC",
   links: [
     {
-      label: "ctftime",
+      label: "CTFtime",
       url: "https://ctftime.org/event/1764",
     },
     {

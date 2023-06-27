@@ -5,11 +5,11 @@ const ctf: Ctf = {
   description: "Sat, 11 Feb. 2023, 01:00 UTC — Sun, 12 Feb. 2023, 09:00 UTC",
   links: [
     {
-      label: "ctftime (International)",
+      label: "CTFtime (International)",
       url: "https://ctftime.org/event/1864",
     },
     {
-      label: "ctftime (Domestic)",
+      label: "CTFtime (Domestic)",
       url: "https://ctftime.org/event/1863",
     },
     {

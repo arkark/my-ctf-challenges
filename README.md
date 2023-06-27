@@ -14,8 +14,8 @@ Sat, 11 Feb. 2023, 01:00 UTC — Sun, 12 Feb. 2023, 09:00 UTC
 
 ### Links
 
-- [ctftime (International)](https://ctftime.org/event/1864)
-- [ctftime (Domestic)](https://ctftime.org/event/1863)
+- [CTFtime (International)](https://ctftime.org/event/1864)
+- [CTFtime (Domestic)](https://ctftime.org/event/1863)
 - [Repository](https://github.com/SECCON/SECCON2022_final_CTF)
 - [My writeups](https://blog.arkark.dev/2023/02/17/seccon-finals/)
 
@@ -35,7 +35,7 @@ Sat, 12 Nov. 2022, 05:00 UTC — Sun, 13 Nov. 2022, 05:00 UTC
 
 ### Links
 
-- [ctftime](https://ctftime.org/event/1764)
+- [CTFtime](https://ctftime.org/event/1764)
 - [Repository](https://github.com/SECCON/SECCON2022_online_CTF)
 - [My writeups](https://blog.arkark.dev/2022/11/18/seccon-en/)
 
@@ -59,7 +59,7 @@ Sat, 11 Dec. 2021, 05:00 UTC — Sun, 12 Dec. 2021, 05:00 UTC
 
 ### Links
 
-- [ctftime](https://ctftime.org/event/1458)
+- [CTFtime](https://ctftime.org/event/1458)
 - [Repository](https://github.com/SECCON/SECCON2021_online_CTF)
 - [My writeups](https://blog.arkark.dev/2021/12/22/seccon/)
 
