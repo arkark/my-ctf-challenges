@@ -1,0 +1,14 @@
+version: "3"
+services:
+  web:
+    build: ./web
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+  bot:
+    build: ./bot
+    restart: unless-stopped
+    ports:
+      - 1337:1337
+    environment:
+      - FLAG=SECCON{blink_t4g_is_no_l0nger_supported_but_String_ha5_blink_meth0d_y3t}
