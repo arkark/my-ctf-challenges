@@ -1,4 +1,4 @@
-import type Ctf from "../Ctf.ts";
+import type Ctf from "@/generator/Ctf.ts";
 
 const ctf: Ctf = {
   name: "SECCON CTF 2021",

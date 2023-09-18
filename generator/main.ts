@@ -1,10 +1,10 @@
-import type Ctf from "./Ctf.ts";
+import type Ctf from "@/generator/Ctf.ts";
 
 const ctfs: Ctf[] = await Promise.all(
   [
-    "./data/20230211-seccon-ctf-2022-finals.ts",
-    "./data/20221112-seccon-ctf-2022-quals.ts",
-    "./data/20211211-seccon-ctf-2021.ts",
+    "@/challenges/202302_SECCON_CTF_2022_Finals/data.ts",
+    "@/challenges/202211_SECCON_CTF_2022_Quals/data.ts",
+    "@/challenges/202112_SECCON_CTF_2021/data.ts",
   ].map((path) => import(path).then(({ default: ctf }) => ctf))
 );
 
