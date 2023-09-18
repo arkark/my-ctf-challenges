@@ -22,57 +22,40 @@ const ctf: Ctf = {
     "Category",
     "Solved",
     "Difficulty",
-    "Repository",
     "Writeup",
     "Keywords",
   ],
   challenges: [
     [
-      "Sequence as a Service 1",
+      "[Sequence as a Service 1](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/sequence-as-a-service-1)",
       "web",
       "20",
       "★★",
-      new URL(
-        "https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/sequence-as-a-service-1"
-      ),
-      new URL(
-        "https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-1"
-      ),
+      "[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-1)",
       "JavaScript sandbox",
     ],
     [
-      "Sequence as a Service 2",
+      "[Sequence as a Service 2](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/sequence-as-a-service-2)",
       "web",
       "19",
       "★",
-      new URL(
-        "https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/sequence-as-a-service-2"
-      ),
-      new URL(
-        "https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-2"
-      ),
+      "[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-2)",
       "JavaScript sandbox",
     ],
     [
-      "Cookie Spinner",
+      "[Cookie Spinner](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/cookie-spinner)",
       "web",
       "7",
       "★★★",
-      new URL(
-        "https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/cookie-spinner"
-      ),
-      new URL("https://blog.arkark.dev/2021/12/22/seccon/#Cookie-Spinner"),
+      "[link](https://blog.arkark.dev/2021/12/22/seccon/#Cookie-Spinner)",
       "DOM clobbering",
     ],
     [
-      "x-note",
+      "[x-note](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/x-note)",
       "web",
       "3",
       "★★★★",
-      new URL(
-        "https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/x-note"
-      ),
-      new URL("https://blog.arkark.dev/2021/12/22/seccon/#x-note"),
+      "[link](https://blog.arkark.dev/2021/12/22/seccon/#x-note)",
       "XS-Search",
     ],
   ],

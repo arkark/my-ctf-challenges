@@ -3,8 +3,8 @@ export default interface Ctf {
   description?: string;
   links: {
     label: string;
-    url: string;
+    url?: string;
   }[];
   columns: string[];
-  challenges: (string | URL)[][];
+  challenges: string[][];
 }

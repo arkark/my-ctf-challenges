@@ -21,13 +21,13 @@ Sat, 11 Feb. 2023, 01:00 UTC — Sun, 12 Feb. 2023, 09:00 UTC
 
 ### Challenges
 
-|Challenge|Category|Solved / 10<br>(International)|Solved / 12<br>(Domestic)|Difficulty|Repository|Writeup|Keywords|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|babybox|web|6|4|★|[link](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/babybox)|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-100-babybox)|prototype pollution|
-|easylfi2|web|10|8|★|[link](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/easylfi2)|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-200-easylfi2)|LFI, curl|
-|MaaS|web|3|1|★★★|[link](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/maas)|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-MaaS)|newline normalization, CSP bypass|
-|light-note|web|0|0|★★★|[link](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/light-note)|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-light-note)|DOM clobbering, Sanitizer API|
-|dark-note|web|0|0|★★★★|[link](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/dark-note)|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-500-dark-note)|time-based oracle|
+|Challenge|Category|Solved / 10<br>(International)|Solved / 12<br>(Domestic)|Difficulty|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|[babybox](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/babybox)|web|6|4|★|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-100-babybox)|prototype pollution|
+|[easylfi2](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/easylfi2)|web|10|8|★|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-200-easylfi2)|LFI, curl|
+|[MaaS](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/maas)|web|3|1|★★★|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-MaaS)|newline normalization, CSP bypass|
+|[light-note](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/light-note)|web|0|0|★★★|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-light-note)|DOM clobbering, Sanitizer API|
+|[dark-note](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/dark-note)|web|0|0|★★★★|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-500-dark-note)|time-based oracle|
 
 ## SECCON CTF 2022 Quals
 
@@ -41,17 +41,17 @@ Sat, 12 Nov. 2022, 05:00 UTC — Sun, 13 Nov. 2022, 05:00 UTC
 
 ### Challenges
 
-|Challenge|Category|Solved|Difficulty|Repository|Writeup|Keywords|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|skipinx|web|102|★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/skipinx)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-skipinx)|query parser|
-|easylfi|web|62|★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/easylfi)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-easylfi)|LFI, curl|
-|bffcalc|web|41|★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/bffcalc)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-bffcalc)|HTTP request splitting|
-|piyosay|web|19|★★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/piyosay)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-piyosay)|Trusted Types, DOMPurify, RegExp|
-|denobox|web|1|★★★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/denobox)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-denobox)|prototype pollution, import maps	|
-|spanote|web|1|★★★★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/spanote)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-spanote)|Chrome, disk cache, bfcache|
-|latexipy|misc|8|★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/latexipy)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#misc-latexipy)|pyjail, magic comment|
-|txtchecker|misc|23|★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/txtchecker)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#misc-txtchecker)|magic file, ReDoS|
-|noiseccon|misc|22|★★|[link](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/noiseccon)|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#misc-noiseccon)|Perlin noise|
+|Challenge|Category|Solved|Difficulty|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[skipinx](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/skipinx)|web|102|★|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-skipinx)|query parser|
+|[easylfi](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/easylfi)|web|62|★|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-easylfi)|LFI, curl|
+|[bffcalc](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/bffcalc)|web|41|★★|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-bffcalc)|HTTP request splitting|
+|[piyosay](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/piyosay)|web|19|★★★|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-piyosay)|Trusted Types, DOMPurify, RegExp|
+|[denobox](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/denobox)|web|1|★★★★|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-denobox)|prototype pollution, import maps	|
+|[spanote](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/spanote)|web|1|★★★★★|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-spanote)|Chrome, disk cache, bfcache|
+|[latexipy](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/latexipy)|misc|8|★★|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#misc-latexipy)|pyjail, magic comment|
+|[txtchecker](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/txtchecker)|misc|23|★★|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#misc-txtchecker)|magic file, ReDoS|
+|[noiseccon](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/noiseccon)|misc|22|★★|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#misc-noiseccon)|Perlin noise|
 
 ## SECCON CTF 2021
 
@@ -65,10 +65,10 @@ Sat, 11 Dec. 2021, 05:00 UTC — Sun, 12 Dec. 2021, 05:00 UTC
 
 ### Challenges
 
-|Challenge|Category|Solved|Difficulty|Repository|Writeup|Keywords|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|Sequence as a Service 1|web|20|★★|[link](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/sequence-as-a-service-1)|[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-1)|JavaScript sandbox|
-|Sequence as a Service 2|web|19|★|[link](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/sequence-as-a-service-2)|[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-2)|JavaScript sandbox|
-|Cookie Spinner|web|7|★★★|[link](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/cookie-spinner)|[link](https://blog.arkark.dev/2021/12/22/seccon/#Cookie-Spinner)|DOM clobbering|
-|x-note|web|3|★★★★|[link](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/x-note)|[link](https://blog.arkark.dev/2021/12/22/seccon/#x-note)|XS-Search|
+|Challenge|Category|Solved|Difficulty|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[Sequence as a Service 1](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/sequence-as-a-service-1)|web|20|★★|[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-1)|JavaScript sandbox|
+|[Sequence as a Service 2](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/sequence-as-a-service-2)|web|19|★|[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-2)|JavaScript sandbox|
+|[Cookie Spinner](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/cookie-spinner)|web|7|★★★|[link](https://blog.arkark.dev/2021/12/22/seccon/#Cookie-Spinner)|DOM clobbering|
+|[x-note](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/x-note)|web|3|★★★★|[link](https://blog.arkark.dev/2021/12/22/seccon/#x-note)|XS-Search|
 

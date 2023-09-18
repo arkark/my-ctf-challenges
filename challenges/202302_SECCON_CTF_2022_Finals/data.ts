@@ -27,77 +27,53 @@ const ctf: Ctf = {
     "Solved / 10<br>(International)",
     "Solved / 12<br>(Domestic)",
     "Difficulty",
-    "Repository",
     "Writeup",
     "Keywords",
   ],
   challenges: [
     [
-      "babybox",
+      "[babybox](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/babybox)",
       "web",
       "6",
       "4",
       "★",
-      new URL(
-        "https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/babybox"
-      ),
-      new URL(
-        "https://blog.arkark.dev/2023/02/17/seccon-finals/#web-100-babybox"
-      ),
+      "[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-100-babybox)",
       "prototype pollution",
     ],
     [
-      "easylfi2",
+      "[easylfi2](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/easylfi2)",
       "web",
       "10",
       "8",
       "★",
-      new URL(
-        "https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/easylfi2"
-      ),
-      new URL(
-        "https://blog.arkark.dev/2023/02/17/seccon-finals/#web-200-easylfi2"
-      ),
+      "[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-200-easylfi2)",
       "LFI, curl",
     ],
     [
-      "MaaS",
+      "[MaaS](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/maas)",
       "web",
       "3",
       "1",
       "★★★",
-      new URL(
-        "https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/maas"
-      ),
-      new URL("https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-MaaS"),
+      "[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-MaaS)",
       "newline normalization, CSP bypass",
     ],
     [
-      "light-note",
+      "[light-note](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/light-note)",
       "web",
       "0",
       "0",
       "★★★",
-      new URL(
-        "https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/light-note"
-      ),
-      new URL(
-        "https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-light-note"
-      ),
+      "[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-light-note)",
       "DOM clobbering, Sanitizer API",
     ],
     [
-      "dark-note",
+      "[dark-note](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/dark-note)",
       "web",
       "0",
       "0",
       "★★★★",
-      new URL(
-        "https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/dark-note"
-      ),
-      new URL(
-        "https://blog.arkark.dev/2023/02/17/seccon-finals/#web-500-dark-note"
-      ),
+      "[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-500-dark-note)",
       "time-based oracle",
     ],
   ],
