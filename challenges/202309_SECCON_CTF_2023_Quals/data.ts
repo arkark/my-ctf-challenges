@@ -13,6 +13,7 @@ const ctf: Ctf = {
     },
     {
       label: "My writeups",
+      url: "https://blog.arkark.dev/2023/09/21/seccon-quals/",
     },
   ],
   columns: [
@@ -29,7 +30,7 @@ const ctf: Ctf = {
       "web",
       "14",
       "★★",
-      "TBD",
+      "[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#web-blink)",
       "DOM clobbering",
     ],
     [
@@ -37,7 +38,7 @@ const ctf: Ctf = {
       "web",
       "12",
       "★★★",
-      "TBD",
+      "[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#web-eeeeejs)",
       "ejs, XSS puzzle",
     ],
     [
@@ -45,7 +46,7 @@ const ctf: Ctf = {
       "web",
       "1",
       "★★★★★",
-      "TBD",
+      "[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#web-hidden-note)",
       "XS-Leak, unstable sort",
     ],
     [
@@ -53,7 +54,7 @@ const ctf: Ctf = {
       "sandbox",
       "53",
       "★",
-      "TBD",
+      "[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#sandbox-crabox)",
       "Rust sandbox",
     ],
     [
@@ -61,7 +62,7 @@ const ctf: Ctf = {
       "sandbox",
       "5",
       "★★★",
-      "TBD",
+      "[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#sandbox-node-ppjail)",
       "prototype pollution",
     ],
     [
@@ -69,7 +70,7 @@ const ctf: Ctf = {
       "sandbox",
       "2",
       "★★★★",
-      "TBD",
+      "[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#sandbox-deno-ppjail)",
       "prototype pollution",
     ],
   ],
