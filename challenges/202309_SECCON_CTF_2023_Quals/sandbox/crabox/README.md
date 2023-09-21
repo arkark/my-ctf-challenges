@@ -8,9 +8,7 @@
 nc crabox.seccon.games 1337
 ```
 
-## Attachments
-
-- [crabox](files/crabox)
+[crabox](files/crabox)
 
 ## Usage
 

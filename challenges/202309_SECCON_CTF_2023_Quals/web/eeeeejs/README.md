@@ -7,9 +7,7 @@ Can you bypass all mitigations?
 - Challenge: `http://eeeeejs.seccon.games:3000`
 - Admin bot: `http://eeeeejs.seccon.games:1337`
 
-## Attachments
-
-- [eeeeejs](files/eeeeejs)
+[eeeeejs](files/eeeeejs)
 
 ## Usage
 
