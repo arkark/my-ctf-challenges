@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <title>Light Note</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "DOMPurify": "https://cdn.jsdelivr.net/npm/dompurify@2.4.3/dist/purify.es.min.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main class="container">
+    <article>
+      <h2 style="margin-bottom: 1rem;">💡 Light Note</h2>
+      <table>
+        <tbody id="notes"></tbody>
+      </table>
+      <input type="text" id="note" name="note" required>
+      <div style="display: flex; justify-content: end;">
+        <a id="createNote" href="#" role="button">Create</a>
+      </div>
+    </article>
+    <article>
+      <input type="text" id="url" name="url" required placeholder="https://example.com">
+      <div style="display: flex; justify-content: end;">
+        <a id="report" href="#" role="button">Report</a>
+      </div>
+    </article>
+    <p style="display: flex; justify-content: end;">
+      <a href="/logout">Logout</a></p>
+    </p>
+  </main>
+  <template id="noteTmpl">
+    <tr><th>
+      <nav>
+        <ul><li class="note" style="word-break: break-all;"></li></ul>
+        <ul><li><a href="#" role="button" class="delete secondary">Delete</a></li></ul>
+      </nav>
+    </th></tr>
+  </template>
+  <script type="module">
+    const createNote =
+      (note) => fetch("/api/notes/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ note }),
+      });
+
+    const deleteNote =
+      (index) => fetch("/api/notes/delete", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ index }),
+      });
+
+    const reportUrl =
+      (url) => fetch("/report", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ url }),
+      })
+        .then(r => r.text())
+        .catch(e => e.toString());
+
+    const write = async (element, input) => {
+      try {
+        element.setHTML(input, {
+          sanitizer: new Sanitizer({ dropElements: ["link", "style"] })
+        });
+      } catch (e) {
+        await import("DOMPurify").then(({ default: DOMPurify }) => {
+          // fallback: Firefox does not support Sanitizer API yet.
+          element.innerHTML = DOMPurify.sanitize(input);
+        }).catch((e) => {
+          // fallback: Safari does not support import maps :(
+          element.innerHTML = input.replace(/[<>'"&]/, "");
+        });
+      }
+    };
+
+    const refresh = async () => {
+      const notes = await fetch("/api/notes").then(r => r.json());
+
+      const root = document.getElementById("notes");
+      root.innerHTML = "";
+      for (const [index, note] of Object.entries(notes)) {
+        const elm = document.getElementById("noteTmpl").content.cloneNode(true);
+        write(elm.querySelector(".note"), note);
+        elm.querySelector(".delete").addEventListener("click", async () => {
+          await deleteNote(index);
+          await refresh();
+        });
+        root.appendChild(elm);
+      }
+    };
+
+    const init = async () => {
+      await refresh();
+
+      document.getElementById("createNote").addEventListener("click", async () => {
+        const elm = document.getElementById("note");
+        const note = elm.value;
+        if (!note) return;
+        elm.value = "";
+
+        await createNote(note);
+        await refresh();
+      });
+
+      document.getElementById("report").addEventListener("click", async () => {
+        const url = document.getElementById("url").value;
+        if (!url) return;
+
+        const res = await reportUrl(url);
+        alert(res);
+      });
+    };
+
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>

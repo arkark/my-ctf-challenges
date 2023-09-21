@@ -1,0 +1,10 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "expr-eval": "^2.0.2",
+    "fastify": "^4.12.0"
+  }
+}

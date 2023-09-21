@@ -32,7 +32,7 @@ const ctf: Ctf = {
   ],
   challenges: [
     [
-      "[babybox](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/babybox)",
+      "[babybox](challenges/202302_SECCON_CTF_2022_Finals/web/babybox)",
       "web",
       "6",
       "4",
@@ -41,7 +41,7 @@ const ctf: Ctf = {
       "prototype pollution",
     ],
     [
-      "[easylfi2](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/easylfi2)",
+      "[easylfi2](challenges/202302_SECCON_CTF_2022_Finals/web/easylfi2)",
       "web",
       "10",
       "8",
@@ -50,7 +50,7 @@ const ctf: Ctf = {
       "LFI, curl",
     ],
     [
-      "[MaaS](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/maas)",
+      "[MaaS](challenges/202302_SECCON_CTF_2022_Finals/web/maas)",
       "web",
       "3",
       "1",
@@ -59,7 +59,7 @@ const ctf: Ctf = {
       "newline normalization, CSP bypass",
     ],
     [
-      "[light-note](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/light-note)",
+      "[light-note](challenges/202302_SECCON_CTF_2022_Finals/web/light-note)",
       "web",
       "0",
       "0",
@@ -68,7 +68,7 @@ const ctf: Ctf = {
       "DOM clobbering, Sanitizer API",
     ],
     [
-      "[dark-note](https://github.com/SECCON/SECCON2022_final_CTF/tree/main/jeopardy/web/dark-note)",
+      "[dark-note](challenges/202302_SECCON_CTF_2022_Finals/web/dark-note)",
       "web",
       "0",
       "0",

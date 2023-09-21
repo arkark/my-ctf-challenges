@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta
+    content="default-src 'self'; base-uri 'none'; object-src 'none'; style-src https://unpkg.com/simpledotcss/simple.min.css; script-src 'nonce-{{CSP_NONCE}}'"
+    http-equiv="Content-Security-Policy"
+  >
+  <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
+  <title>MaaS</title>
+</head>
+<body>
+  <h1>Minifier as a Service</h1>
+  <p>Result:</p>
+  <pre><code>{{MINIFIED_CODE}}</code></pre>
+  <p>Compression rate: <span id="compressionRate"></span></p>
+  <script nonce="{{CSP_NONCE}}">
+    (() => {
+      const minifiedLength = {{MINIFIED_LENGTH}};
+      const originalLength = {{ORIGINAL_LENGTH}};
+      const rate = ((minifiedLength / originalLength) * 100) | 0;
+      document.getElementById("compressionRate").innerHTML = `<b>${rate}%</b> (= ${minifiedLength} / ${originalLength})`;
+    })();
+  </script>
+  <a href="/#{{MINIFIED_CODE}}"><button type="button" id="edit">Edit</button></a>
+</body>
+</html>

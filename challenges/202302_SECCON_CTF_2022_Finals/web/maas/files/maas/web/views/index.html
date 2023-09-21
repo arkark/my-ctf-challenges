@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
+  <title>MaaS</title>
+  <script src="https://cdn.jsdelivr.net/npm/terser/dist/bundle.min.js"></script>
+</head>
+<body>
+  <h1>Minifier as a Service</h1>
+  <p>Your JavaScript program:</p>
+  <form id="form" method="post" action="/post">
+    <textarea id="originalCode" rows="5" placeholder="const ans = (1 + 2 + 3) * 7;&#10;alert(ans);"></textarea>
+    <textarea id="minifiedCode" name="minifiedCode" style="display:none;"></textarea>
+    <input type="hidden" id="originalLength" name="originalLength"></input>
+    <input type="hidden" id="minifiedLength" name="minifiedLength"></input>
+    <div style="display: flex; justify-content: space-between;">
+      <button id="minify" type="submit">Minify</button>
+      <button id="report" type="button">Report</button>
+    </div>
+  </form>
+  <script>
+    form.addEventListener("submit", (event) => {
+      const elements = event.target.elements;
+      const originalCode = elements.originalCode.value;
+
+      Terser.minify(originalCode)
+        .then(({ code: minifiedCode }) => {
+          elements.minifiedCode.value = minifiedCode;
+          elements.originalLength.value = originalCode.length;
+          elements.minifiedLength.value = minifiedCode.length;
+          form.submit();
+        })
+        .catch((err) => {
+          alert(`Failed to minify the code:\n${err}`);
+        });
+
+      event.preventDefault();
+    });
+
+    report.addEventListener("click", async () => {
+      const res = await fetch("/report", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          code: originalCode.value,
+        }),
+      })
+        .then(r => r.text())
+        .catch(e => e.toString());
+      alert(res);
+    });
+
+    if (location.hash) {
+      originalCode.value = decodeURIComponent(location.hash.slice(1));
+    }
+  </script>
+</body>
+</html>
