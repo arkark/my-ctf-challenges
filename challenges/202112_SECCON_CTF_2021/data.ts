@@ -20,7 +20,7 @@ const ctf: Ctf = {
   columns: [
     "Challenge",
     "Category",
-    "Solved",
+    "Solved / 506",
     "Difficulty",
     "Writeup",
     "Keywords",

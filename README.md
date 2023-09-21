@@ -21,7 +21,7 @@ Sat, 16 Sept. 2023, 05:00 UTC — Sun, 17 Sept. 2023, 05:00 UTC
 
 ### Challenges
 
-|Challenge|Category|Solved|Difficulty|Writeup|Keywords|
+|Challenge|Category|Solved / 653|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |[blink](challenges/202309_SECCON_CTF_2023_Quals/web/blink)|web|14|★★|[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#web-blink)|DOM clobbering|
 |[eeeeejs](challenges/202309_SECCON_CTF_2023_Quals/web/eeeeejs)|web|12|★★★|[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#web-eeeeejs)|ejs, XSS puzzle|
@@ -63,7 +63,7 @@ Sat, 12 Nov. 2022, 05:00 UTC — Sun, 13 Nov. 2022, 05:00 UTC
 
 ### Challenges
 
-|Challenge|Category|Solved|Difficulty|Writeup|Keywords|
+|Challenge|Category|Solved / 726|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |[skipinx](challenges/202211_SECCON_CTF_2022_Quals/web/skipinx)|web|102|★|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-skipinx)|query parser|
 |[easylfi](challenges/202211_SECCON_CTF_2022_Quals/web/easylfi)|web|62|★|[link](https://blog.arkark.dev/2022/11/18/seccon-en/#web-easylfi)|LFI, curl|
@@ -87,7 +87,7 @@ Sat, 11 Dec. 2021, 05:00 UTC — Sun, 12 Dec. 2021, 05:00 UTC
 
 ### Challenges
 
-|Challenge|Category|Solved|Difficulty|Writeup|Keywords|
+|Challenge|Category|Solved / 506|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |[Sequence as a Service 1](challenges/202112_SECCON_CTF_2021/web/sequence-as-a-service-1)|web|20|★★|[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-1)|JavaScript sandbox|
 |[Sequence as a Service 2](challenges/202112_SECCON_CTF_2021/web/sequence-as-a-service-2)|web|19|★|[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-2)|JavaScript sandbox|
