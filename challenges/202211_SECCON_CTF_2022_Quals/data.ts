@@ -27,7 +27,7 @@ const ctf: Ctf = {
   ],
   challenges: [
     [
-      "[skipinx](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/skipinx)",
+      "[skipinx](challenges/202211_SECCON_CTF_2022_Quals/web/skipinx)",
       "web",
       "102",
       "★",
@@ -35,7 +35,7 @@ const ctf: Ctf = {
       "query parser",
     ],
     [
-      "[easylfi](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/easylfi)",
+      "[easylfi](challenges/202211_SECCON_CTF_2022_Quals/web/easylfi)",
       "web",
       "62",
       "★",
@@ -43,7 +43,7 @@ const ctf: Ctf = {
       "LFI, curl",
     ],
     [
-      "[bffcalc](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/bffcalc)",
+      "[bffcalc](challenges/202211_SECCON_CTF_2022_Quals/web/bffcalc)",
       "web",
       "41",
       "★★",
@@ -51,7 +51,7 @@ const ctf: Ctf = {
       "HTTP request splitting",
     ],
     [
-      "[piyosay](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/piyosay)",
+      "[piyosay](challenges/202211_SECCON_CTF_2022_Quals/web/piyosay)",
       "web",
       "19",
       "★★★",
@@ -59,7 +59,7 @@ const ctf: Ctf = {
       "Trusted Types, DOMPurify, RegExp",
     ],
     [
-      "[denobox](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/denobox)",
+      "[denobox](challenges/202211_SECCON_CTF_2022_Quals/web/denobox)",
       "web",
       "1",
       "★★★★",
@@ -67,7 +67,7 @@ const ctf: Ctf = {
       "prototype pollution, import maps	",
     ],
     [
-      "[spanote](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/spanote)",
+      "[spanote](challenges/202211_SECCON_CTF_2022_Quals/web/spanote)",
       "web",
       "1",
       "★★★★★",
@@ -75,7 +75,7 @@ const ctf: Ctf = {
       "Chrome, disk cache, bfcache",
     ],
     [
-      "[latexipy](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/latexipy)",
+      "[latexipy](challenges/202211_SECCON_CTF_2022_Quals/misc/latexipy)",
       "misc",
       "8",
       "★★",
@@ -83,7 +83,7 @@ const ctf: Ctf = {
       "pyjail, magic comment",
     ],
     [
-      "[txtchecker](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/txtchecker)",
+      "[txtchecker](challenges/202211_SECCON_CTF_2022_Quals/misc/txtchecker)",
       "misc",
       "23",
       "★★",
@@ -91,7 +91,7 @@ const ctf: Ctf = {
       "magic file, ReDoS",
     ],
     [
-      "[noiseccon](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/misc/noiseccon)",
+      "[noiseccon](challenges/202211_SECCON_CTF_2022_Quals/misc/noiseccon)",
       "misc",
       "22",
       "★★",

@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  challenge:
+    build: .
+    restart: always
+    ports:
+      - 2022:2022
