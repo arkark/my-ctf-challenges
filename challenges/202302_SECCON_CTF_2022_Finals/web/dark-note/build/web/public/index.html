@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <title>Dark Note</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <article>
+      <h2 style="margin-bottom: 1rem">⚡ Dark Note</h2>
+      <table>
+        <tbody id="notes"></tbody>
+      </table>
+      <input type="text" id="note" name="note" required placeholder="Hello, {{name}} {{emoji}}">
+      <div style="display: flex; justify-content: end;">
+        <a id="createNote" href="#" role="button">Create</a>
+      </div>
+    </article>
+    <article>
+      <select id="emoji" name="emoji" value="1" required></select>
+      <div style="display: flex; justify-content: end;">
+        <a id="changeEmoji" href="#" role="button">Change emoji</a>
+      </div>
+    </article>
+    <article>
+      <input type="text" id="url" name="url" required placeholder="https://example.com">
+      <div style="display: flex; justify-content: end;">
+        <a id="report" href="#" role="button">Report</a>
+      </div>
+    </article>
+    <p style="display: flex; justify-content: end;">
+      <a href="/logout">Logout</a></p>
+    </p>
+  </main>
+  <template id="noteTmpl">
+    <tr>
+      <th>
+        <nav>
+          <ul><li class="note" style="word-break: break-all;"></li></ul>
+          <ul><li><a href="#" role="button" class="delete secondary">Delete</a></li></ul>
+        </nav>
+      </th>
+    </tr>
+  </template>
+  <script>
+    const createNote =
+      (note) => fetch("/api/notes/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ note }),
+      });
+
+    const deleteNote =
+      (index) => fetch("/api/notes/delete", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ index }),
+      });
+
+    const changeEmoji =
+      (emoji) => fetch("/api/emojis/change", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ emoji }),
+      });
+
+    const reportUrl =
+      (url) => fetch("/report", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ url }),
+      })
+        .then(r => r.text())
+        .catch(e => e.toString());
+
+    const refresh = async () => {
+      const notes = await fetch("/api/notes").then(r => r.json());
+
+      const root = document.getElementById("notes");
+      root.innerHTML = "";
+      for (const [index, note] of Object.entries(notes)) {
+        const elm = document.getElementById("noteTmpl").content.cloneNode(true);
+        elm.querySelector(".note").textContent = note;
+        elm.querySelector(".delete").addEventListener("click", async () => {
+          await deleteNote(index);
+          await refresh();
+        });
+        root.appendChild(elm);
+      }
+    };
+
+    const init = async () => {
+      await refresh();
+
+      document.getElementById("createNote").addEventListener("click", async () => {
+        const elm = document.getElementById("note");
+        const note = elm.value;
+        if (!note) return;
+        elm.value = "";
+
+        await createNote(note);
+        await refresh();
+      });
+
+      const emojis = await fetch("/api/emojis").then(r => r.json());
+      const emojiRoot = document.getElementById("emoji");
+      for (const [i, emoji] of Object.entries(emojis)) {
+        const elm = document.createElement("option");
+        elm.value = emoji;
+        elm.textContent = emoji;
+        emojiRoot.appendChild(elm);
+      }
+      document.getElementById("changeEmoji").addEventListener("click", async () => {
+        const emoji = document.getElementById("emoji").value;
+        if (!emoji) return;
+
+        await changeEmoji(emoji);
+        await refresh();
+      });
+
+      document.getElementById("report").addEventListener("click", async () => {
+        const url = document.getElementById("url").value;
+        if (!url) return;
+
+        const res = await reportUrl(url);
+        alert(res);
+      });
+    };
+
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>

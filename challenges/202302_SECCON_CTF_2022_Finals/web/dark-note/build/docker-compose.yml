@@ -1,0 +1,17 @@
+version: "3"
+services:
+  web:
+    build: ./web
+    restart: always
+    ports:
+      - "1337:1337"
+      - "3000-4000:3000-4000"
+    environment:
+      - LOWER_PORT=3000
+      - UPPER_PORT=4000
+    command: 'socat tcp-listen:1337,fork,reuseaddr exec:"node instancer/instancer.js"'
+  bot:
+    build: ./bot
+    restart: always
+    environment:
+      - FLAG=SECCON{d0wnwe11}

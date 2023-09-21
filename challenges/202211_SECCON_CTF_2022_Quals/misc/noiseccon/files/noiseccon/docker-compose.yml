@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  noise:
+    build: .
+    restart: always
+    environment:
+      - FLAG=SECCON{dummy}
+    ports:
+      - 1337:1337

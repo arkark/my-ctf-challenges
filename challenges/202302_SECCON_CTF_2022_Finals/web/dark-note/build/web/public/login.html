@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <title>Dark Note</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <article>
+      <h2 style="margin-bottom: 1rem">Login</h2>
+      <form action="/login" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" minlength="6" required>
+        <label for="password">Password:</label>
+        <input type="text" name="password" minlength="6" required>
+        <button type="submit">Submit</button>
+      </form>
+      <p>Go to <a href="/signup">Signup</a> if you don't have an account yet.</p>
+    </article>
+  </main>
+</body>
+</html>

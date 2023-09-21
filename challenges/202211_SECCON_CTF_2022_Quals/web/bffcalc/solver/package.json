@@ -1,0 +1,9 @@
+{
+  "name": "exploit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "fastify": "^4.9.2"
+  }
+}

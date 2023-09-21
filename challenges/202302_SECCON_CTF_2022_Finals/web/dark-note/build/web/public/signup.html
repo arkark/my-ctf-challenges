@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <title>Dark Note</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <article>
+      <h2 style="margin-bottom: 1rem">Signup</h2>
+      <form action="/signup" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" minlength="6" required>
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" minlength="6" required>
+        <label for="emoji">Emoji:</label>
+        <select id="emoji" name="emoji" value="1" required></select>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+      <p>Go to <a href="/login">Login</a> if you already have an account.</p>
+    </article>
+  </main>
+  <script>
+    const init = async () => {
+      const emojis = await fetch("/api/emojis").then(r => r.json());
+
+      const root = document.getElementById("emoji");
+      for (const [i, emoji] of Object.entries(emojis)) {
+        const elm = document.createElement("option");
+        elm.value = emoji;
+        elm.textContent = emoji;
+        root.appendChild(elm);
+      }
+    };
+
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+version: "3"
+services:
+  web-bot:
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - FLAG=SECCON{dummy}
+
+  # # The remote server uses the following settings:
+  #     - TRUST_PROXY=1
+  # nginx:
+  #   image: nginx:latest
+  #   restart: always
+  #   ports:
+  #     - "443:443"
+  #   depends_on:
+  #     - web-bot
+  #   volumes:
+  #     - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+  #     - /path/to/server.crt:/etc/nginx/certs/server.crt:ro
+  #     - /path/to/server.key:/etc/nginx/certs/server.key:ro

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>easylfi</title>
+</head>
+<body>
+  <h1 id="hello"></h1>
+  <script>
+    hello.textContent = `Hello, ${
+      new URLSearchParams(location.search).get("name")
+    }!`;
+  </script>
+</body>
+</html>

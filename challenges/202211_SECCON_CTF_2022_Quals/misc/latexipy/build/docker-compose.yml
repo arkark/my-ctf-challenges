@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  latexipy:
+    build: .
+    restart: always
+    ports:
+      - 2337:2337

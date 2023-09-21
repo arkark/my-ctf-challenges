@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
+  <title>Math Calculator</title>
+</head>
+<body>
+  <h1>Math Calculator</h1>
+  <p>Expression:</p>
+  <input type="text" id="expr" placeholder="1 + 2 + 3"></input>
+  <button id="calc" type="button">Evaluate</button>
+  <article>
+    <p>Result:</p>
+    <p id="result" style="text-align: center; font-size: 3rem;"></p>
+  </article>
+  <script>
+    document.getElementById("calc").addEventListener("click", async () => {
+      const expr = document.getElementById("expr").value.trim();
+      if (!expr) return;
+      try {
+        const res = await fetch("/calc", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ expr }),
+        });
+        const text = await res.text();
+        if (res.status !== 200) {
+          alert(text);
+        } else {
+          document.getElementById("result").textContent = text;
+        }
+      } catch (err) {
+        alert(err);
+      }
+    });
+  </script>
+</body>
+</html>

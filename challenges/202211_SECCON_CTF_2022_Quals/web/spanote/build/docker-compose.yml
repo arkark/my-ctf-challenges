@@ -1,0 +1,19 @@
+version: "3"
+services:
+  web:
+    build: ./web
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - BOT_HOST=bot
+      - BOT_PORT=8000
+  bot:
+    build: ./bot
+    restart: always
+    environment:
+      - FLAG=SECCON{hack3rs_po11ute_3verything_by_v4ri0us_meanS}
+      - PORT=8000
+      - APP_HOST=web
+      - APP_PORT=3000

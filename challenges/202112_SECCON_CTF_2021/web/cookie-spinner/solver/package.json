@@ -1,0 +1,11 @@
+{
+  "name": "exploit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "fastify": "^3.19.1",
+    "node-fetch": "^3.0.0"
+  }
+}
