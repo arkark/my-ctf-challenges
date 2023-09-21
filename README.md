@@ -4,9 +4,31 @@ A repository for CTF challenges I created. It contains the source code, the solv
 
 ### ToC
 
+- [SECCON CTF 2023 Quals](#seccon-ctf-2023-quals)
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## SECCON CTF 2023 Quals
+
+Sat, 16 Sept. 2023, 05:00 UTC — Sun, 17 Sept. 2023, 05:00 UTC
+
+### Links
+
+- [CTFtime](https://ctftime.org/event/2003/)
+- Repository (TBD)
+- [My writeups](https://blog.arkark.dev/2023/09/21/seccon-quals/)
+
+### Challenges
+
+|Challenge|Category|Solved|Difficulty|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[blink](challenges/202309_SECCON_CTF_2023_Quals/web/blink)|web|14|★★|[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#web-blink)|DOM clobbering|
+|[eeeeejs](challenges/202309_SECCON_CTF_2023_Quals/web/eeeeejs)|web|12|★★★|[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#web-eeeeejs)|ejs, XSS puzzle|
+|[hidden-note](challenges/202309_SECCON_CTF_2023_Quals/web/hidden-note)|web|1|★★★★★|[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#web-hidden-note)|XS-Leak, unstable sort|
+|[crabox](challenges/202309_SECCON_CTF_2023_Quals/sandbox/crabox)|sandbox|53|★|[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#sandbox-crabox)|Rust sandbox|
+|[node-ppjail](challenges/202309_SECCON_CTF_2023_Quals/sandbox/node-ppjail)|sandbox|5|★★★|[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#sandbox-node-ppjail)|prototype pollution|
+|[deno-ppjail](challenges/202309_SECCON_CTF_2023_Quals/sandbox/deno-ppjail)|sandbox|2|★★★★|[link](https://blog.arkark.dev/2023/09/21/seccon-quals/#sandbox-deno-ppjail)|prototype pollution|
 
 ## SECCON CTF 2022 Finals
 
