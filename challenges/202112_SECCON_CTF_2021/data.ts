@@ -27,7 +27,7 @@ const ctf: Ctf = {
   ],
   challenges: [
     [
-      "[Sequence as a Service 1](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/sequence-as-a-service-1)",
+      "[Sequence as a Service 1](challenges/202112_SECCON_CTF_2021/web/sequence-as-a-service-1)",
       "web",
       "20",
       "★★",
@@ -35,7 +35,7 @@ const ctf: Ctf = {
       "JavaScript sandbox",
     ],
     [
-      "[Sequence as a Service 2](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/sequence-as-a-service-2)",
+      "[Sequence as a Service 2](challenges/202112_SECCON_CTF_2021/web/sequence-as-a-service-2)",
       "web",
       "19",
       "★",
@@ -43,7 +43,7 @@ const ctf: Ctf = {
       "JavaScript sandbox",
     ],
     [
-      "[Cookie Spinner](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/cookie-spinner)",
+      "[Cookie Spinner](challenges/202112_SECCON_CTF_2021/web/cookie-spinner)",
       "web",
       "7",
       "★★★",
@@ -51,7 +51,7 @@ const ctf: Ctf = {
       "DOM clobbering",
     ],
     [
-      "[x-note](https://github.com/SECCON/SECCON2021_online_CTF/tree/main/web/x-note)",
+      "[x-note](challenges/202112_SECCON_CTF_2021/web/x-note)",
       "web",
       "3",
       "★★★★",

