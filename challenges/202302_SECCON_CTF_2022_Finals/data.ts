@@ -12,14 +12,6 @@ const ctf: Ctf = {
       label: "CTFtime (Domestic)",
       url: "https://ctftime.org/event/1863",
     },
-    {
-      label: "Repository",
-      url: "https://github.com/SECCON/SECCON2022_final_CTF",
-    },
-    {
-      label: "My writeups",
-      url: "https://blog.arkark.dev/2023/02/17/seccon-finals/",
-    },
   ],
   columns: [
     "Challenge",

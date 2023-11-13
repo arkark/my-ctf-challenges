@@ -8,14 +8,6 @@ const ctf: Ctf = {
       label: "CTFtime",
       url: "https://ctftime.org/event/1764",
     },
-    {
-      label: "Repository",
-      url: "https://github.com/SECCON/SECCON2022_online_CTF",
-    },
-    {
-      label: "My writeups",
-      url: "https://blog.arkark.dev/2022/11/18/seccon-en/",
-    },
   ],
   columns: [
     "Challenge",

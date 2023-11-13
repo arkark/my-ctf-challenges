@@ -13,13 +13,7 @@ A repository for CTF challenges I created. It contains the source code, the solv
 
 Sat, 16 Sept. 2023, 05:00 UTC — Sun, 17 Sept. 2023, 05:00 UTC
 
-### Links
-
 - [CTFtime](https://ctftime.org/event/2003/)
-- Repository (TBD)
-- [My writeups](https://blog.arkark.dev/2023/09/21/seccon-quals/)
-
-### Challenges
 
 |Challenge|Category|Solved / 653|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -34,14 +28,8 @@ Sat, 16 Sept. 2023, 05:00 UTC — Sun, 17 Sept. 2023, 05:00 UTC
 
 Sat, 11 Feb. 2023, 01:00 UTC — Sun, 12 Feb. 2023, 09:00 UTC
 
-### Links
-
 - [CTFtime (International)](https://ctftime.org/event/1864)
 - [CTFtime (Domestic)](https://ctftime.org/event/1863)
-- [Repository](https://github.com/SECCON/SECCON2022_final_CTF)
-- [My writeups](https://blog.arkark.dev/2023/02/17/seccon-finals/)
-
-### Challenges
 
 |Challenge|Category|Solved / 10<br>(International)|Solved / 12<br>(Domestic)|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -55,13 +43,7 @@ Sat, 11 Feb. 2023, 01:00 UTC — Sun, 12 Feb. 2023, 09:00 UTC
 
 Sat, 12 Nov. 2022, 05:00 UTC — Sun, 13 Nov. 2022, 05:00 UTC
 
-### Links
-
 - [CTFtime](https://ctftime.org/event/1764)
-- [Repository](https://github.com/SECCON/SECCON2022_online_CTF)
-- [My writeups](https://blog.arkark.dev/2022/11/18/seccon-en/)
-
-### Challenges
 
 |Challenge|Category|Solved / 726|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -79,13 +61,7 @@ Sat, 12 Nov. 2022, 05:00 UTC — Sun, 13 Nov. 2022, 05:00 UTC
 
 Sat, 11 Dec. 2021, 05:00 UTC — Sun, 12 Dec. 2021, 05:00 UTC
 
-### Links
-
 - [CTFtime](https://ctftime.org/event/1458)
-- [Repository](https://github.com/SECCON/SECCON2021_online_CTF)
-- [My writeups](https://blog.arkark.dev/2021/12/22/seccon/)
-
-### Challenges
 
 |Challenge|Category|Solved / 506|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|

@@ -26,15 +26,11 @@ const genCtfSection = function* (ctf: Ctf) {
     yield "";
   }
 
-  yield "### Links";
-  yield "";
   for (const link of ctf.links) {
     yield link.url ? `- [${link.label}](${link.url})` : `- ${link.label} (TBD)`;
   }
   yield "";
 
-  yield "### Challenges";
-  yield "";
   yield `|${ctf.columns.join("|")}|`;
   yield `|${":-:|".repeat(ctf.columns.length)}`;
   for (const row of ctf.challenges) {
