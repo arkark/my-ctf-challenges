@@ -4,7 +4,7 @@
 
 Minifier as a Service
 
-- `http://maas.seccon.games:3000`
+- `http://maas.{int,dom}.seccon.games:3000`
 
 [maas](files/maas)
 

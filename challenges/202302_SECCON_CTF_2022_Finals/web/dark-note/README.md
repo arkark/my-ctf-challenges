@@ -6,7 +6,7 @@ I created an incredibly blazing-fast note application!
 
 Instancer:
 ```
-nc dark-note.seccon.games 1337
+nc dark-note.{int,dom}.seccon.games 1337
 ```
 
 [dark-note](files/dark-note)

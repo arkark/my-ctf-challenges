@@ -4,7 +4,7 @@
 
 [easylfi](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/web/easylfi) again! I know you fully understand everything about curl.
 
-- `http://easylfi2.seccon.games:3000`
+- `http://easylfi2.{int,dom}.seccon.games:3000`
 
 [easylfi2](files/easylfi2)
 

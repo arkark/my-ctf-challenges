@@ -4,7 +4,7 @@
 
 Can you hack this sandbox?
 
-- `http://babybox.seccon.games:3000`
+- `http://babybox.{int,dom}.seccon.games:3000`
 
 [babybox](files/babybox)
 
