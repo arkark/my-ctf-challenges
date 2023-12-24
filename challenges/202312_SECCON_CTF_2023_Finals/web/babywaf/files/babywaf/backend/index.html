@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div style="transform: rotate(-5deg);">
+    <h1>Do you want a flag?</h1>
+    <button id="button" style="font-size: 3rem; transform: rotate(15deg) translatex(5rem);">
+      Click me!
+    </button>
+  </div>
+  <script>
+    button.addEventListener("click", async () => {
+      const flag = await fetch("/", {
+        method: "POST",
+        body: JSON.stringify({ givemeflag: true }),
+      }).then((r) => r.text());
+
+      alert(flag);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>whitespace.js</title>
+  <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
+</head>
+<body>
+  <h1>whitespace.js</h1>
+  <div style="display: flex; gap: 1rem;">
+  <input id="expr" type="text" placeholder="7 * 7">
+    <button id="calc" type="button">Calculate</button>
+  </div>
+  <pre id="result" style="text-align: center; font-size: 3rem; margin: 1rem 0;"> </pre>
+
+  <script>
+    const $ = document.getElementById.bind(document);
+    $("calc").addEventListener("click", async () => {
+      const expr = $("expr").value;
+      if (!expr) return;
+
+      const result = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ expr }),
+      }).then((r) => r.text());
+
+      $("result").textContent = result;
+    });
+  </script>
+</body>
+</html>

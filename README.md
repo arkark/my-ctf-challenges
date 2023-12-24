@@ -4,10 +4,26 @@ A repository for CTF challenges I created. It contains the source code, the solv
 
 ### ToC
 
+- [SECCON CTF 2023 Finals](#seccon-ctf-2023-finals)
 - [SECCON CTF 2023 Quals](#seccon-ctf-2023-quals)
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## SECCON CTF 2023 Finals
+
+Sat, 23 Dec. 2023, 01:00 UTC — Sun, 24 Dec. 2023, 09:00 UTC
+
+- [CTFtime (International)](https://ctftime.org/event/2159)
+- [CTFtime (Domestic)](https://ctftime.org/event/2160)
+
+|Challenge|Category|Solved / 12<br>(International)|Solved / 12<br>(Domestic)|Difficulty|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|[babywaf](challenges/202312_SECCON_CTF_2023_Finals/web/babywaf)|web|8|4|?|TBA|???|
+|[cgi-2023](challenges/202312_SECCON_CTF_2023_Finals/web/cgi-2023)|web|5|2|?|TBA|???|
+|[LemonMD](challenges/202312_SECCON_CTF_2023_Finals/web/lemonmd)|web|2|1|?|TBA|???|
+|[DOMLeakify](challenges/202312_SECCON_CTF_2023_Finals/web/domleakify)|web|1|0|?|TBA|???|
+|[whitespace.js](challenges/202312_SECCON_CTF_2023_Finals/web/whitespace-js)|misc|2|2|?|TBA|???|
 
 ## SECCON CTF 2023 Quals
 
