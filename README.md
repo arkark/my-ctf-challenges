@@ -23,7 +23,7 @@ Sat, 23 Dec. 2023, 01:00 UTC — Sun, 24 Dec. 2023, 09:00 UTC
 |[cgi-2023](challenges/202312_SECCON_CTF_2023_Finals/web/cgi-2023)|web|5|2|?|TBA|???|
 |[LemonMD](challenges/202312_SECCON_CTF_2023_Finals/web/lemonmd)|web|2|1|?|TBA|???|
 |[DOMLeakify](challenges/202312_SECCON_CTF_2023_Finals/web/domleakify)|web|1|0|?|TBA|???|
-|[whitespace.js](challenges/202312_SECCON_CTF_2023_Finals/web/whitespace-js)|misc|2|2|?|TBA|???|
+|[whitespace.js](challenges/202312_SECCON_CTF_2023_Finals/misc/whitespace-js)|misc|2|2|?|TBA|???|
 
 ## SECCON CTF 2023 Quals
 

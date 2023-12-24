@@ -61,7 +61,7 @@ const ctf: Ctf = {
       "???",
     ],
     [
-      "[whitespace.js](challenges/202312_SECCON_CTF_2023_Finals/web/whitespace-js)",
+      "[whitespace.js](challenges/202312_SECCON_CTF_2023_Finals/misc/whitespace-js)",
       "misc",
       "2",
       "2",
