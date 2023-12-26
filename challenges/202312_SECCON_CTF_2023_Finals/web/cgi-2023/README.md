@@ -14,7 +14,7 @@ CGI is one of the lost technologies.
 Launch a challenge server:
 
 ```
-cd files/cgi-2023
+cd build
 docker compose up
 ```
 

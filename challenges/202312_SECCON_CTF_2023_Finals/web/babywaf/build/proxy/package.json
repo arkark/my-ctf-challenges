@@ -1,0 +1,10 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "@fastify/http-proxy": "^9.3.0",
+    "fastify": "^4.25.0"
+  }
+}

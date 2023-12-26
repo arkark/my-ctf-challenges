@@ -14,7 +14,7 @@ NO LEAK, NO LIFE.
 Launch a challenge server:
 
 ```
-cd files/domleakify
+cd build
 docker compose up
 ```
 

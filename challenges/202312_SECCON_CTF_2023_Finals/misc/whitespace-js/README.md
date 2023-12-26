@@ -13,7 +13,7 @@ Don't worry, this is not an esolang challenge.
 Launch a challenge server:
 
 ```
-cd files/whitespace-js
+cd build
 docker compose up
 ```
 

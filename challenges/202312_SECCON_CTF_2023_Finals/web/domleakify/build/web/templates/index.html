@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <title>DOMLeakify</title>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+</head>
+<body>
+  <h1>DOMLeakify</h1>
+  <div id="content"></div>
+  <ul>
+    {% for i in range(flag|length) %}
+      {% set prefix = flag[:i+1] %}
+      <li id="{{ prefix }}" class="{{ prefix }}">{{ prefix }}</li>
+    {% endfor %}
+  </ul>
+  <script>
+    (() => {
+      const html = decodeURIComponent(location.hash.slice(1));
+      if (html.length > 512) return;
+      document.getElementById("content").innerHTML = DOMPurify.sanitize(html, {
+        FORBID_TAGS: ["style"],   // No CSS Injection
+        FORBID_ATTR: ["loading"], // No lazy loading
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+services:
+  proxy:
+    build: ./proxy
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      - FLAG=SECCON{**MAY**_in_rfc8259_8.1}

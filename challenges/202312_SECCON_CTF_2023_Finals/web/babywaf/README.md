@@ -13,7 +13,7 @@ Do you want a flag? 🚩🚩🚩
 Launch a challenge server:
 
 ```
-cd files/babywaf
+cd build
 docker compose up
 ```
 

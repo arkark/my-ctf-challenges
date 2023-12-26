@@ -14,7 +14,7 @@
 Launch a challenge server:
 
 ```
-cd files/lemonmd
+cd build
 docker compose up
 ```
 
