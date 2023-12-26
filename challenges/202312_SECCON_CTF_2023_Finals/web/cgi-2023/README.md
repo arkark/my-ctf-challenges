@@ -28,3 +28,11 @@ docker run -it --rm \
     -p 8080:8080 --network=host \
     (docker build -q ./solver)
 ```
+
+where `http://attacker.example.com` is an origin forwarded to `http://localhost:8080`.
+
+## Flag
+
+```
+SECCON{leaky_sri}
+```

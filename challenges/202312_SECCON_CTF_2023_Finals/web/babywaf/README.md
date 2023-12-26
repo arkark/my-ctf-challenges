@@ -24,3 +24,9 @@ docker run -it --rm \
     --network=host \
     (docker build -q ./solver)
 ```
+
+## Flag
+
+```
+SECCON{**MAY**_in_rfc8259_8.1}
+```
