@@ -19,7 +19,6 @@ docker compose up
 ```
 
 Run the author's solver:
-ローカル:
 ```
 docker run -it --rm \
     -e WEB_BASE_URL=http://localhost:3000 \
