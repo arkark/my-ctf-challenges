@@ -1,0 +1,9 @@
+{
+  "name": "solver",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "fastify": "^4.25.0"
+  }
+}
