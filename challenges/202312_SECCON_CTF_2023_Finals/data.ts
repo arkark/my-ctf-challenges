@@ -66,7 +66,7 @@ const ctf: Ctf = {
       "2",
       "2",
       "★★",
-      "[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-whitespace-js)",
+      "[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#misc-whitespace-js)",
       "JavaScript sandbox",
     ],
   ],
