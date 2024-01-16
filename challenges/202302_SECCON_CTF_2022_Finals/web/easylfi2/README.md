@@ -6,7 +6,9 @@
 
 - `http://easylfi2.{int,dom}.seccon.games:3000`
 
-[easylfi2](files/easylfi2)
+## Attachments
+
+- [easylfi2](files/easylfi2)
 
 ## Usage
 

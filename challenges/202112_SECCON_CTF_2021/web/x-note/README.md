@@ -6,9 +6,11 @@ Here is a secure note app!
 
 - `http://x-note-x.quals.seccon.jp:3000`
 
-[dist](files/dist)
-
 Flag format: `SECCON{[_0-9a-z]+}`
+
+## Attachments
+
+- [dist](files/dist)
 
 ## Usage
 

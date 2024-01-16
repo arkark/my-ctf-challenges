@@ -7,7 +7,9 @@ Shared pages hide your secret notes.
 - Challenge: `http://hidden-note.seccon.games:3000`
 - Admin bot: `http://hidden-note.seccon.games:1337`
 
-[hidden-note](files/hidden-note)
+## Attachments
+
+- [hidden-note](files/hidden-note)
 
 ## Usage
 

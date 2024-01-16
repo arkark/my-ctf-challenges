@@ -7,7 +7,9 @@ Popover API is supported from Chrome 114. The awesome API is so useful that you 
 - Challenge: `http://blink.seccon.games:3000`
 - Admin bot: `http://blink.seccon.games:1337`
 
-[blink](files/blink)
+## Attachments
+
+- [blink](files/blink)
 
 ## Usage
 

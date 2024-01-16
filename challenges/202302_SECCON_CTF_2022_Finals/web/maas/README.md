@@ -6,7 +6,9 @@ Minifier as a Service
 
 - `http://maas.{int,dom}.seccon.games:3000`
 
-[maas](files/maas)
+## Attachments
+
+- [maas](files/maas)
 
 ## Usage
 

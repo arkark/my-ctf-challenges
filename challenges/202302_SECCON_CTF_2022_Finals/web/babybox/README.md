@@ -6,7 +6,9 @@ Can you hack this sandbox?
 
 - `http://babybox.{int,dom}.seccon.games:3000`
 
-[babybox](files/babybox)
+## Attachments
+
+- [babybox](files/babybox)
 
 ## Usage
 

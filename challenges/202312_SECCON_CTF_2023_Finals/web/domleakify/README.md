@@ -7,7 +7,9 @@ NO LEAK, NO LIFE.
 - Challenge: `http://domleakify.{int,dom}.seccon.games:3000`
 - Admin bot: `http://domleakify.{int,dom}.seccon.games:1337`
 
-[domleakify](files/domleakify)
+## Attachments
+
+- [domleakify](files/domleakify)
 
 ## Usage
 

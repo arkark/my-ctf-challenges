@@ -7,7 +7,9 @@ CGI is one of the lost technologies.
 - Challenge: `http://cgi-2023.{int,dom}.seccon.games:3000`
 - Admin bot: `http://cgi-2023.{int,dom}.seccon.games:1337`
 
-[cgi-2023](files/cgi-2023)
+## Attachments
+
+- [cgi-2023](files/cgi-2023)
 
 ## Usage
 

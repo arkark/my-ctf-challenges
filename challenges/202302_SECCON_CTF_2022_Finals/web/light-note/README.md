@@ -6,7 +6,9 @@ I created a blazing fast note application!
 
 - `https://light-note.{int,dom}.seccon.games`
 
-[light-note](files/light-note)
+## Attachments
+
+- [light-note](files/light-note)
 
 ## Usage
 

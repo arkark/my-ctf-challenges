@@ -4,9 +4,11 @@
 
 NEW FEATURE: You can get values from **two** sequences at the same time! Go `[here](http://sequence-as-a-service-2.quals.seccon.jp:3000)`.
 
-[dist](files/dist)
-
 Note: It is possible to solve SaaS 2 even if you don't solve SaaS 1.
+
+## Attachments
+
+- [dist](files/dist)
 
 ## Usage
 

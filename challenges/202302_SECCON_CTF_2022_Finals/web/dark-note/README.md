@@ -9,9 +9,11 @@ Instancer:
 nc dark-note.{int,dom}.seccon.games 1337
 ```
 
-[dark-note](files/dark-note)
-
 Note: The instancer has no bugs or vulnerabilities (at least in my intended solution).
+
+## Attachments
+
+- [dark-note](files/dark-note)
 
 ## Usage
 

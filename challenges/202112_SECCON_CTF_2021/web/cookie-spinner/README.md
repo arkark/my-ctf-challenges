@@ -4,7 +4,9 @@
 
 Do you like cookies? If so, go `[here](http://153.127.199.64:3000)` now!
 
-[dist](files/dist)
+## Attachments
+
+- [dist](files/dist)
 
 ## Usage
 

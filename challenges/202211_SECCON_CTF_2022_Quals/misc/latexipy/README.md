@@ -8,7 +8,9 @@ Latexify as a Service
 nc latexipy.seccon.games 2337
 ```
 
-[latexipy](files/latexipy)
+## Attachments
+
+- [latexipy](files/latexipy)
 
 ## Usage
 

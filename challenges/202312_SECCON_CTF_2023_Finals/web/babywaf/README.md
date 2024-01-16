@@ -6,7 +6,9 @@ Do you want a flag? 🚩🚩🚩
 
 - Challenge: `http://babywaf.{int,dom}.seccon.games:3000`
 
-[babywaf](files/babywaf)
+## Attachments
+
+- [babywaf](files/babywaf)
 
 ## Usage
 

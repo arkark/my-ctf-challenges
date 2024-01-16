@@ -6,7 +6,9 @@ ALL YOU HAVE TO DO IS SKIP NGINX
 
 - `http://skipinx.seccon.games:8080`
 
-[skipinx](files/skipinx)
+## Attachments
+
+- [skipinx](files/skipinx)
 
 ## Usage
 

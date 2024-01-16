@@ -6,7 +6,9 @@ Don't worry, this is not an esolang challenge.
 
 - Challenge: `https://whitespace-js.{int,dom}.seccon.games:3000`
 
-[whitespace-js](files/whitespace-js)
+## Attachments
+
+- [whitespace-js](files/whitespace-js)
 
 ## Usage
 
