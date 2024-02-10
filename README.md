@@ -1,6 +1,6 @@
 # My CTF Challenges
 
-A repository for CTF challenges I created. It contains the source code, the solvers, and the author writeups for all the challenges. Have fun playing CTFs :sunglasses:
+A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ### ToC
 

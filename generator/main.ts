@@ -43,7 +43,7 @@ const genCtfSection = function* (ctf: Ctf) {
 const genAll = function* () {
   yield "# My CTF Challenges";
   yield "";
-  yield "A repository for CTF challenges I created. It contains the source code, the solvers, and the author writeups for all the challenges. Have fun playing CTFs :sunglasses:";
+  yield "A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:";
   yield "";
   yield* genToc();
   yield "";
