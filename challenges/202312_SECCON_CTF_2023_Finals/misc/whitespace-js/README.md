@@ -27,9 +27,3 @@ docker run -it --rm \
     --network=host \
     (docker build -q ./solver)
 ```
-
-## Flag
-
-```
-SECCON{P4querett3_Down_the_Bunburr0ws}
-```

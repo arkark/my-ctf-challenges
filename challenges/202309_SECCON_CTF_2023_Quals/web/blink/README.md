@@ -31,9 +31,3 @@ docker run -it \
 ```
 
 where `http://attacker.example.com` is an origin forwarded to `http://localhost:8080`.
-
-## Flag
-
-```
-SECCON{blink_t4g_is_no_l0nger_supported_but_String_ha5_blink_meth0d_y3t}
-```

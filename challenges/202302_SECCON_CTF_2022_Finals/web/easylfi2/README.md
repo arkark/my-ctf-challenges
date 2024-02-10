@@ -28,9 +28,3 @@ docker run -it \
     --network=host \
     (docker build -q ./solver)
 ```
-
-## Flag
-
-```
-SECCON{Wha7_files_did_you_use_to_s0lve_1t}
-```

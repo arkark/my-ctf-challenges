@@ -30,9 +30,3 @@ docker run -it \
 ```
 
 where `http://attacker.example.com` is an origin forwarded to `http://localhost:8080`.
-
-## Flag
-
-```
-SECCON{w0w_yoU_div3d_deeeeeep_iNto_DOMPurify}
-```

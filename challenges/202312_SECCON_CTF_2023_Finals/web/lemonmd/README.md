@@ -31,9 +31,3 @@ docker run -it --rm \
 ```
 
 where `http://attacker.example.com` is an origin forwarded to `http://localhost:8080`.
-
-## Flag
-
-```
-SECCON{Do_not_m1x_HTML_injecti0n_and_I5lands_Archit3cture}
-```

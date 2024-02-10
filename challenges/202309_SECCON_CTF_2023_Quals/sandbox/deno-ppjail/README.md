@@ -30,9 +30,3 @@ docker run -it \
     --network=host \
     (docker build -q ./solver)
 ```
-
-## Flag
-
-```
-SECCON{ECMAScr1pt_has_g4dgets_of_prototype_po11ution!!!}
-```

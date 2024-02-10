@@ -26,9 +26,3 @@ docker run -it \
     --network=host \
     (docker build -q ./solver)
 ```
-
-## Flag
-
-```
-SECCON{45deg_P4sc4l_g3Ner4tes_Fib0n4CCi_5eq!}
-```

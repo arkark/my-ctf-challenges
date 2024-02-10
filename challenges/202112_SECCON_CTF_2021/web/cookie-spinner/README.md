@@ -27,9 +27,3 @@ docker run -it \
 ```
 
 where `http://attacker.example.com` is an origin forwarded to `http://localhost:8080`.
-
-## Flag
-
-```
-SECCON{4r3_U_pLayin6_sP1n_Sp1N_c00k13_clicK3r?}
-```

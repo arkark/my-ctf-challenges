@@ -30,9 +30,3 @@ docker run -it \
 ```
 
 where `http://attacker.example.com` is an origin forwarded to `http://localhost:8080`.
-
-## Flag
-
-```
-SECCON{induction_i5_one_0f_my_favarite_g4mes}
-```

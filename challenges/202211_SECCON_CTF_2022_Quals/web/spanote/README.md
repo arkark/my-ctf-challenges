@@ -30,9 +30,3 @@ docker run -it \
 ```
 
 where `http://attacker.example.com` is an origin forwarded to `http://localhost:8080`.
-
-## Flag
-
-```
-SECCON{hack3rs_po11ute_3verything_by_v4ri0us_meanS}
-```

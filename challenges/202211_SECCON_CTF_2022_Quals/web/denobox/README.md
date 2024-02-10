@@ -28,9 +28,3 @@ docker run -it \
     -p 8080:8080 --network=host \
     (docker build -q ./solver)
 ```
-
-## Flag
-
-```
-SECCON{thE_denO_masc0t_dino5auR_staNding_in_tHe_s4ndbox}
-```

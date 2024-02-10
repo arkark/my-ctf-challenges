@@ -28,9 +28,3 @@ docker run -it \
     --network=host \
     (docker build -q ./solver)
 ```
-
-## Flag
-
-```
-SECCON{sometimes_deFault_options_are_useful_to_bypa55}
-```

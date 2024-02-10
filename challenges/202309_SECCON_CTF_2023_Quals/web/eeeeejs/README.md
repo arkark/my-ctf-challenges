@@ -31,9 +31,3 @@ docker run -it \
 ```
 
 where `http://attacker.example.com` is an origin forwarded to `http://localhost:8080`.
-
-## Flag
-
-```
-SECCON{RCE_is_po55ible_if_mitigation_4_does_not_exist}
-```

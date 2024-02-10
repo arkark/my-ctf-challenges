@@ -30,9 +30,3 @@ docker run -it \
     --network=host \
     (docker build -q ./solver)
 ```
-
-## Flag
-
-```
-SECCON{Deno_i5_an_anagr4m_0f_Node}
-```

@@ -26,9 +26,3 @@ docker run -it \
     --network=host \
     (docker build -q ./solver)
 ```
-
-## Flag
-
-```
-SECCON{Fr4cTaL_seq_1s_G00D:1,1,2,1,3,2,4,1,5,3,6,2,7,4,8,1}
-```

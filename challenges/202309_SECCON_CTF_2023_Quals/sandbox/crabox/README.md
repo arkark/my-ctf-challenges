@@ -30,9 +30,3 @@ docker run -it \
     --network=host \
     (docker build -q ./solver)
 ```
-
-## Flag
-
-```
-SECCON{ctfe_i5_p0w3rful}
-```

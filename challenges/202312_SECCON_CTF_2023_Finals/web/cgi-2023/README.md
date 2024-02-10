@@ -31,9 +31,3 @@ docker run -it --rm \
 ```
 
 where `http://attacker.example.com` is an origin forwarded to `http://localhost:8080`.
-
-## Flag
-
-```
-SECCON{leaky_sri}
-```

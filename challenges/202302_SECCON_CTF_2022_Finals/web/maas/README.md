@@ -30,9 +30,3 @@ docker run -it \
 ```
 
 where `http://attacker.example.com` is an origin forwarded to `http://localhost:8080`.
-
-## Flag
-
-```
-SECCON{csp_bypa55_is_a_type_0f_puzzle_games_for_h4ckerS}
-```

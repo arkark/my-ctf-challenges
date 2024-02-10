@@ -30,9 +30,3 @@ docker run -it \
     --network=host \
     (docker build -q ./solver)
 ```
-
-## Flag
-
-```
-SECCON{reDo5L1fe}
-```

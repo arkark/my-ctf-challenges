@@ -28,9 +28,3 @@ docker run -it \
     --network=host \
     (docker build -q ./solver)
 ```
-
-## Flag
-
-```
-SECCON{pr0totyp3_po11ution_iS_my_friend}
-```
