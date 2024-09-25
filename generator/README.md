@@ -8,7 +8,7 @@
 
 ## Commands
 
-Watch with a hot-reload:
+Watch:
 
 ```
 deno task watch
