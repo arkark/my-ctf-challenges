@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "dependencies": {
+    "@fastify/static": "^7.0.4",
+    "fastify": "^4.28.1"
+  }
+}

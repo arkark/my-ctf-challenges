@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cowsay as a Service</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <h1>Cowsay as a Service</h1>
+      <div>
+        <input id="message" type="message" value="Hello!" required />
+        <input id="say" type="button" value="Say" />
+      </div>
+      <pre><code id="out"></code></pre>
+      <script>
+        const $ = document.getElementById.bind(document);
+
+        $("say").addEventListener("click", async () => {
+          const message = $("message").value;
+          if (!message) return;
+
+          const { uuid } = await fetch(
+            `/say?message=${encodeURIComponent(message)}`
+          ).then((r) => r.json());
+          location.hash = uuid;
+        });
+
+        const show = async () => {
+          const uuid = location.hash.slice(1);
+          const out = await fetch(`/out/${uuid}`).then((r) => r.text());
+          $("out").textContent = out;
+        };
+        window.addEventListener("hashchange", show);
+        if (location.hash) show();
+      </script>
+    </main>
+  </body>
+</html>

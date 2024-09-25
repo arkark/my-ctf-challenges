@@ -1,0 +1,9 @@
+services:
+  web:
+    build: ./web
+    restart: unless-stopped
+    platform: linux/amd64
+    ports:
+      - 3000:3000
+    environment:
+      - APP_HOST=http://${IERAEDAYS_CTFSV_FQDN}:3000

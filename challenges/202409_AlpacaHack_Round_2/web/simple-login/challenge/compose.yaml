@@ -1,0 +1,25 @@
+services:
+  web:
+    build: ./web
+    restart: unless-stopped
+    ports:
+      - ${PORT:-3000}:3000
+    environment:
+      MYSQL_HOST: db
+      MYSQL_DATABASE: chall
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    depends_on:
+      - db
+  db:
+    build:
+      context: ./db
+      dockerfile_inline: |
+        FROM mysql:8.0.39
+        COPY init.sql /docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=chall
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass

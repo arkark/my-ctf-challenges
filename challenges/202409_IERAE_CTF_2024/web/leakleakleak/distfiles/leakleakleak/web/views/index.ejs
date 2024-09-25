@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Leak!</title>
+    <style nonce="<%= nonce %>">
+      .highlight {
+        background-color: yellow;
+      }
+      html {
+        position: fixed;
+        padding: 2rem;
+      }
+      form {
+        display: table;
+        div {
+          display: table-row;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Notes</h1>
+    <form action="/create" method="post">
+      <div>
+        <input type="text" name="note" id="note" required />
+        <input type="submit" value="Create" id="createNote" />
+      </div>
+    </form>
+    <ul>
+      <%- notes.map(note => `<li>${note}</li>`).join("\n") %>
+    </ul>
+    <% if (notes.length > 0 ) { %>
+      <form action="/delete" method="post">
+        <input type="number" name="index" hidden value="<%= notes.length - 1 %>" />
+        <input type="submit" value="Delete" />
+      </form>
+    <% } %>
+    <hr />
+    <form action="/" method="get">
+      <div>
+        <input type="text" name="query" />
+        <input type="submit" value="Search" />
+      </div>
+    </form>
+  </body>
+</html>

@@ -2,7 +2,10 @@ import type Ctf from "@/generator/Ctf.ts";
 
 const ctfs: Ctf[] = await Promise.all(
   [
+    "@/challenges/202409_IERAE_CTF_2024/data.ts",
+    "@/challenges/202409_AlpacaHack_Round_2/data.ts",
     "@/challenges/202312_SECCON_CTF_2023_Finals/data.ts",
+    "@/challenges/202312_IERAE_DAYS_CTF_2023/data.ts",
     "@/challenges/202309_SECCON_CTF_2023_Quals/data.ts",
     "@/challenges/202302_SECCON_CTF_2022_Finals/data.ts",
     "@/challenges/202211_SECCON_CTF_2022_Quals/data.ts",

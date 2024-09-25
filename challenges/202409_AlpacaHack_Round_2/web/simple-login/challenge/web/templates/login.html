@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+    />
+    <title>Simple Login</title>
+  </head>
+  <body>
+    <main>
+      <h1>Simple Login</h1>
+      <form action="/login" method="post">
+        <fieldset>
+          <label>
+            Name
+            <input name="username" type="text" required />
+          </label>
+          <label>
+            Password
+            <input name="password" type="text" required />
+          </label>
+        </fieldset>
+        <input type="submit" value="Login" />
+      </form>
+    </main>
+  </body>
+</html>

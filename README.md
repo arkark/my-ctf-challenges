@@ -4,11 +4,39 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ### ToC
 
+- [IERAE CTF 2024](#ierae-ctf-2024)
+- [AlpacaHack Round 2 (Web)](#alpacahack-round-2-(web))
 - [SECCON CTF 2023 Finals](#seccon-ctf-2023-finals)
+- [IERAE DAYS CTF v0.1](#ierae-days-ctf-v0.1)
 - [SECCON CTF 2023 Quals](#seccon-ctf-2023-quals)
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## IERAE CTF 2024
+
+Sat, 21 Sep. 2024, 06:00 UTC — Sun, 22 Sep. 2024, 06:00 UTC
+
+- [CTFtime](https://ctftime.org/event/2441/)
+
+|Challenge|Category|Solved|Difficulty|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[5](challenges/202409_IERAE_CTF_2024/misc/five)|misc|8|★|TODO|Bash|
+|[Leak! Leak! Leak!](challenges/202409_IERAE_CTF_2024/web/leakleakleak)|web|3|★★★★|TODO|XS-Leak, CSP|
+
+## AlpacaHack Round 2 (Web)
+
+**An individual competition in 6 hours:**<br>Sun, 01 Sep. 2024, 03:00 UTC — Sun, 01 Sep. 2024, 09:00 UTC
+
+- [CTFtime](https://ctftime.org/event/2465)
+- [Website](https://alpacahack.com/ctfs/round-2)
+
+|Challenge|Category|Solved|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|
+|[Simple Login](challenges/202409_AlpacaHack_Round_2/web/simple-login)|web|84|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#Simple-Login)|SQL injection|
+|[Pico Note 1](challenges/202409_AlpacaHack_Round_2/web/pico-note-1)|web|10|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#Pico-Note-1)|CSP bypass, JavaScript|
+|[CaaS](challenges/202409_AlpacaHack_Round_2/web/caas)|web|13|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#CaaS)|RCE, Perl|
+|[Pico Note 2](challenges/202409_AlpacaHack_Round_2/web/pico-note-2)|web|3|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#Pico-Note-2)|Import Maps|
 
 ## SECCON CTF 2023 Finals
 
@@ -24,6 +52,16 @@ Sat, 23 Dec. 2023, 01:00 UTC — Sun, 24 Dec. 2023, 09:00 UTC
 |[LemonMD](challenges/202312_SECCON_CTF_2023_Finals/web/lemonmd)|web|2|1|★★★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-LemonMD)|Fresh, Islands Architecture|
 |[DOMLeakify](challenges/202312_SECCON_CTF_2023_Finals/web/domleakify)|web|1|0|★★★★★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-DOMLeakify)|CSS injection on style attributes|
 |[whitespace.js](challenges/202312_SECCON_CTF_2023_Finals/misc/whitespace-js)|misc|2|2|★★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#misc-whitespace-js)|JavaScript sandbox|
+
+## IERAE DAYS CTF v0.1
+
+**An onsite local event:**<br>Thu, 7 Dec. 2023
+
+- [Repository](https://github.com/gmo-ierae/ierae-days-ctf-2023)
+
+|Challenge|Category|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|
+|[simple-proxy](challenges/202312_IERAE_DAYS_CTF_2023/web/simple-proxy)|web|TODO|request target|
 
 ## SECCON CTF 2023 Quals
 

@@ -1,0 +1,8 @@
+services:
+  web:
+    build: ./web
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    environment:
+      - APP_HOST=http://localhost:3000

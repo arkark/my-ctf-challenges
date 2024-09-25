@@ -1,0 +1,15 @@
+services:
+  chall:
+    build: ./chall
+    restart: unless-stopped
+    init: true
+    ports:
+      - 3000:3000
+    deploy:
+      resources:
+        reservations:
+          cpus: "0.5"
+          memory: 100M
+        limits:
+          cpus: "0.5"
+          memory: 100M

