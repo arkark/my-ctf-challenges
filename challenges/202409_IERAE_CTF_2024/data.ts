@@ -25,7 +25,7 @@ const ctf: Ctf = {
       "8",
       "★",
       "TODO",
-      "Bash",
+      "Bun",
     ],
     [
       "[Leak! Leak! Leak!](challenges/202409_IERAE_CTF_2024/web/leakleakleak)",

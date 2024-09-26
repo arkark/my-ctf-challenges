@@ -7,7 +7,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 - [IERAE CTF 2024](#ierae-ctf-2024)
 - [AlpacaHack Round 2 (Web)](#alpacahack-round-2-(web))
 - [SECCON CTF 2023 Finals](#seccon-ctf-2023-finals)
-- [IERAE DAYS CTF v0.1](#ierae-days-ctf-v0.1)
+- [IERAE DAYS CTF 2023](#ierae-days-ctf-2023)
 - [SECCON CTF 2023 Quals](#seccon-ctf-2023-quals)
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
@@ -21,7 +21,7 @@ Sat, 21 Sep. 2024, 06:00 UTC — Sun, 22 Sep. 2024, 06:00 UTC
 
 |Challenge|Category|Solved|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
-|[5](challenges/202409_IERAE_CTF_2024/misc/five)|misc|8|★|TODO|Bash|
+|[5](challenges/202409_IERAE_CTF_2024/misc/five)|misc|8|★|TODO|Bun|
 |[Leak! Leak! Leak!](challenges/202409_IERAE_CTF_2024/web/leakleakleak)|web|3|★★★★|TODO|XS-Leak, CSP|
 
 ## AlpacaHack Round 2 (Web)
@@ -53,7 +53,7 @@ Sat, 23 Dec. 2023, 01:00 UTC — Sun, 24 Dec. 2023, 09:00 UTC
 |[DOMLeakify](challenges/202312_SECCON_CTF_2023_Finals/web/domleakify)|web|1|0|★★★★★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-DOMLeakify)|CSS injection on style attributes|
 |[whitespace.js](challenges/202312_SECCON_CTF_2023_Finals/misc/whitespace-js)|misc|2|2|★★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#misc-whitespace-js)|JavaScript sandbox|
 
-## IERAE DAYS CTF v0.1
+## IERAE DAYS CTF 2023
 
 **An onsite local event:**<br>Thu, 7 Dec. 2023
 

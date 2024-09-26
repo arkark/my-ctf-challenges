@@ -1,7 +1,7 @@
 import type Ctf from "@/generator/Ctf.ts";
 
 const ctf: Ctf = {
-  name: "IERAE DAYS CTF v0.1",
+  name: "IERAE DAYS CTF 2023",
 
   description: "**An onsite local event:**<br>Thu, 7 Dec. 2023",
   links: [
