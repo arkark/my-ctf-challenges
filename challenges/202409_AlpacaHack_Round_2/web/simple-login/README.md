@@ -6,7 +6,7 @@ A simple login service :)
 
 ## Attachments
 
-- [simple-login](distfiles/simple-login)
+- [simple-login](distfiles)
 
 ## Usage
 

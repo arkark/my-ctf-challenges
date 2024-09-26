@@ -6,7 +6,7 @@
 
 ## Attachments
 
-- [caas](distfiles/caas)
+- [caas](distfiles)
 
 ## Usage
 

@@ -6,7 +6,7 @@ The template engine is very simple but powerful 🔥
 
 ## Attachments
 
-- [pico-note-2](distfiles/pico-note-2)
+- [pico-note-2](distfiles)
 
 ## Usage
 
