@@ -5,7 +5,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 ### ToC
 
 - [IERAE CTF 2024](#ierae-ctf-2024)
-- [AlpacaHack Round 2 (Web)](#alpacahack-round-2-(web))
+- [AlpacaHack Round 2 (Web)](#alpacahack-round-2-web)
 - [SECCON CTF 2023 Finals](#seccon-ctf-2023-finals)
 - [IERAE DAYS CTF 2023](#ierae-days-ctf-2023)
 - [SECCON CTF 2023 Quals](#seccon-ctf-2023-quals)
@@ -19,10 +19,10 @@ Sat, 21 Sep. 2024, 06:00 UTC — Sun, 22 Sep. 2024, 06:00 UTC
 
 - [CTFtime](https://ctftime.org/event/2441/)
 
-|Challenge|Category|Solved|Difficulty|Writeup|Keywords|
-|:-:|:-:|:-:|:-:|:-:|:-:|
-|[5](challenges/202409_IERAE_CTF_2024/misc/five)|misc|8|★|TODO|Bun|
-|[Leak! Leak! Leak!](challenges/202409_IERAE_CTF_2024/web/leakleakleak)|web|3|★★★★|TODO|XS-Leak, CSP|
+|Challenge|Category|Solved|Difficulty|Keywords|
+|:-:|:-:|:-:|:-:|:-:|
+|[5](challenges/202409_IERAE_CTF_2024/misc/five)|misc|8|★|Bun|
+|[Leak! Leak! Leak!](challenges/202409_IERAE_CTF_2024/web/leakleakleak)|web|3|★★★★|XS-Leak, CSP|
 
 ## AlpacaHack Round 2 (Web)
 
@@ -59,9 +59,9 @@ Sat, 23 Dec. 2023, 01:00 UTC — Sun, 24 Dec. 2023, 09:00 UTC
 
 - [Repository](https://github.com/gmo-ierae/ierae-days-ctf-2023)
 
-|Challenge|Category|Writeup|Keywords|
-|:-:|:-:|:-:|:-:|
-|[simple-proxy](challenges/202312_IERAE_DAYS_CTF_2023/web/simple-proxy)|web|TODO|request target|
+|Challenge|Category|Keywords|
+|:-:|:-:|:-:|
+|[simple-proxy](challenges/202312_IERAE_DAYS_CTF_2023/web/simple-proxy)|web|request target|
 
 ## SECCON CTF 2023 Quals
 
