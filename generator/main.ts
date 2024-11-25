@@ -17,7 +17,10 @@ const genToc = function* () {
   yield "### ToC";
   yield "";
   for (const ctf of ctfs) {
-    yield `- [${ctf.name}](#${ctf.name.toLowerCase().replaceAll(" ", "-")})`;
+    yield `- [${ctf.name}](#${ctf.name
+      .toLowerCase()
+      .replaceAll(" ", "-")
+      .replace(/[()]/g, "")})`;
   }
 };
 
