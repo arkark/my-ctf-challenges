@@ -1,0 +1,15 @@
+{
+  "name": "self-ssrf",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

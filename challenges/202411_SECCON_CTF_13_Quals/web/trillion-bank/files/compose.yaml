@@ -1,0 +1,25 @@
+services:
+  web:
+    build: ./web
+    restart: unless-stopped
+    init: true
+    ports:
+      - 3000:3000
+    environment:
+      MYSQL_HOST: db
+      MYSQL_DATABASE: chall
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+      FLAG: SECCON{dummy}
+    depends_on:
+      - db
+  db:
+    image: mysql:8.0.40
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=chall
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
+    command:
+      - --sql_mode=

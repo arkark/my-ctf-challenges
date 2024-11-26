@@ -1,0 +1,9 @@
+{
+  "name": "double-parser",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "fastify": "^5.1.0"
+  }
+}

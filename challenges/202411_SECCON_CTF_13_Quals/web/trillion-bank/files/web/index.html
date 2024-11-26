@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Trillion Bank</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simpledotcss/simple.min.css"
+    />
+  </head>
+  <body>
+    <h1>Trillion Bank 🏦</h1>
+
+    <label>Your Name</label>
+    <input type="text" id="name" disabled />
+    <label>Your Balance</label>
+    <input type="text" id="balance" disabled />
+
+    <button id="sync" type="button">Sync</button>
+    <h3>Money Transfer</h3>
+    <label>Sender Name</label>
+    <input type="text" id="senderName" disabled />
+    <label>Recipient Name</label>
+    <input type="text" id="recipientName" />
+    <label>Amount</label>
+    <input type="number" id="amount" value="1" />
+    <button id="transfer">Transfer</button>
+
+    <script type="module">
+      const $ = document.getElementById.bind(document);
+
+      const query = async (path, data) => {
+        const method = data ? "POST" : "GET";
+        const body = data ? JSON.stringify(data) : undefined;
+        try {
+          const res = await fetch(`/api${path}`, {
+            method,
+            body,
+            headers: { "Content-Type": "application/json" },
+          });
+          return { status: res.status, ...(await res.json()) };
+        } catch (err) {
+          return { status: 500, msg: err.message };
+        }
+      };
+
+      // Register
+      let name;
+      while (true) {
+        name = prompt("Input your name");
+        if (!name) continue;
+
+        const { status, msg } = await query("/register", { name });
+        if (status !== 200) {
+          alert(msg);
+        } else {
+          break;
+        }
+      }
+      $("name").value = name;
+      $("senderName").value = name;
+
+      // Sync
+      const sync = async () => {
+        const { status, msg, balance } = await query("/me");
+        if (status !== 200) {
+          alert(msg);
+        } else {
+          $("balance").value = balance;
+        }
+      };
+      sync();
+      $("sync").addEventListener("click", sync);
+
+      // Money Transfer
+      const transfer = async () => {
+        const amount = $("amount").value;
+        if (amount <= 0 || amount > parseInt($("balance").value)) {
+          alert("Invalid amount\n(Requirements: 0 < amount <= your balance)");
+          return;
+        }
+        const recipientName = $("recipientName").value;
+        if (!recipientName) return;
+        if (recipientName === name) {
+          alert("Self-transfer is not allowed");
+          return;
+        }
+
+        const { status, msg } = await query("/transfer", {
+          recipientName,
+          amount,
+        });
+        sync();
+        alert(msg);
+      };
+      $("transfer").addEventListener("click", transfer);
+    </script>
+  </body>
+</html>

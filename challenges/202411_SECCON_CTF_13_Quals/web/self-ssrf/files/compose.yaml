@@ -1,0 +1,9 @@
+services:
+  chall:
+    build: ./web
+    restart: unless-stopped
+    init: true
+    ports:
+      - 3000:3000
+    environment:
+      - FLAG=SECCON{dummy}

@@ -1,0 +1,1 @@
+SECCON{https://github.com/golang/go/issues/59968}

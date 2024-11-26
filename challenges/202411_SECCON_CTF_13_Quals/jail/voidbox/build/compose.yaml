@@ -1,0 +1,7 @@
+services:
+  sandbox:
+    build: ./sandbox
+    restart: unless-stopped
+    init: true
+    ports:
+      - 3000:3000

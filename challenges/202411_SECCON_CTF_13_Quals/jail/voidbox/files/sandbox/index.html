@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>voidbox</title>
+  <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
+</head>
+<body>
+  <h1>voidbox</h1>
+  <textarea id="$code">7 * 7</textarea>
+  <button id="$run" type="button">Run</button>
+
+  <script>
+    $run.addEventListener("click", () => {
+      const code = $code.value;
+      if (!code) return;
+
+      fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ code }),
+      }).then((r) => r.text()).then(alert);
+    });
+  </script>
+</body>
+</html>

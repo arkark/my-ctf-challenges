@@ -4,6 +4,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ### ToC
 
+- [SECCON CTF 13 Quals](#seccon-ctf-13-quals)
 - [IERAE CTF 2024](#ierae-ctf-2024)
 - [AlpacaHack Round 2 (Web)](#alpacahack-round-2-web)
 - [SECCON CTF 2023 Finals](#seccon-ctf-2023-finals)
@@ -12,6 +13,22 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## SECCON CTF 13 Quals
+
+Sat, 23 Nov. 2024, 05:00 UTC — Sun, 24 Nov. 2024, 05:00 UTC
+
+- [CTFtime](https://ctftime.org/event/2478/)
+
+|Challenge|Category|Solved|Difficulty|Keywords|Co-Author|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[Trillion Bank](challenges/202411_SECCON_CTF_13_Quals/web/trillion-bank)|web|84|★|MySQL|N/A|
+|[self-ssrf](challenges/202411_SECCON_CTF_13_Quals/web/self-ssrf)|web|23|★★|URL parser, Bun|N/A|
+|[double-parser](challenges/202411_SECCON_CTF_13_Quals/web/double-parser)|web|17|★★|HTML parser, XSS|N/A|
+|[pp4](challenges/202411_SECCON_CTF_13_Quals/jail/pp4)|jail|41|★|JavaScript, prototype pollution|N/A|
+|[1linepyjail](challenges/202411_SECCON_CTF_13_Quals/jail/1linepyjail)|jail|15|★★|pyjail|N/A|
+|[Go to Jail](challenges/202411_SECCON_CTF_13_Quals/jail/go-to-jail)|jail|6|★★★|Go, polyglot, code golf|N/A|
+|[voidbox](challenges/202411_SECCON_CTF_13_Quals/jail/voidbox)|jail|3|★★★★★|JavaScript, sandbox escape|[Satoooon](https://x.com/Satoooon1024)|
 
 ## IERAE CTF 2024
 
