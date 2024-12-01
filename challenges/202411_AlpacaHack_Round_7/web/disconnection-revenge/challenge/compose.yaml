@@ -1,0 +1,15 @@
+services:
+  disconnection-revenge:
+    build: ./web
+    restart: unless-stopped
+    init: true
+    ports:
+      - ${PORT_WEB:-3000}:3000
+  disconnection-revenge-bot:
+    build: ./bot
+    restart: unless-stopped
+    init: true
+    ports:
+      - ${PORT_BOT:-1337}:1337
+    environment:
+      - FLAG=Alpaca{unintended_solutions_everywh3re_sorry}

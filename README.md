@@ -4,6 +4,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ### ToC
 
+- [AlpacaHack Round 7 (Web)](#alpacahack-round-7-web)
 - [SECCON CTF 13 Quals](#seccon-ctf-13-quals)
 - [IERAE CTF 2024](#ierae-ctf-2024)
 - [AlpacaHack Round 2 (Web)](#alpacahack-round-2-web)
@@ -13,6 +14,20 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## AlpacaHack Round 7 (Web)
+
+**An individual competition in 6 hours:**<br>Sun, 30 Nov. 2024, 03:00 UTC — Sun, 30 Nov. 2024, 09:00 UTC
+
+- [CTFtime](https://ctftime.org/event/2544)
+- [Website](https://alpacahack.com/ctfs/round-7)
+
+|Challenge|Category|Solved|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|
+|[Treasure Hunt](challenges/202411_AlpacaHack_Round_7/web/treasure-hunt)|web|71|[link (ja)](https://blog.arkark.dev/2024/12/01/alpacahack-round-7/#Treasure-Hunt)|URL encoding|
+|[minimal-waf](challenges/202411_AlpacaHack_Round_7/web/minimal-waf)|web|4|[link (ja)](https://blog.arkark.dev/2024/12/01/alpacahack-round-7/#minimal-waf)|XSS|
+|[disconnection](challenges/202411_AlpacaHack_Round_7/web/disconnection)|web|5|TODO|browser behavior|
+|[disconnection-revenge](challenges/202411_AlpacaHack_Round_7/web/disconnection-revenge)|web|1|TODO|browser behavior|
 
 ## SECCON CTF 13 Quals
 

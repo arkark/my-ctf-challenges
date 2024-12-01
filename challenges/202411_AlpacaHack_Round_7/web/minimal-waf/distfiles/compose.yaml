@@ -1,0 +1,10 @@
+services:
+  minimal-waf:
+    build: ./
+    restart: unless-stopped
+    init: true
+    ports:
+      - ${PORT_WEB:-3000}:3000
+      - ${PORT_BOT:-1337}:1337
+    environment:
+      - FLAG=Alpaca{REDACTED}

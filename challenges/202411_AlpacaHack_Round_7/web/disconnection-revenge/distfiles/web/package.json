@@ -1,0 +1,8 @@
+{
+  "name": "disconnection",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
