@@ -1,4 +1,4 @@
-# [web] fetch-box
+# [web, misc] fetch-box
 
 ## Description
 
