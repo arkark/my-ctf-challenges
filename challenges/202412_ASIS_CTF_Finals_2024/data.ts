@@ -23,7 +23,7 @@ const ctf: Ctf = {
       "web, misc",
       "19",
       "★★",
-      "[link](https://blog.arkark.dev/2024/12/29/asisctf-finals/#web-misc-fetch-box)",
+      "[link](https://blog.arkark.dev/2024/12/30/asisctf-finals/#web-misc-fetch-box)",
       "fetch, sandbox",
     ],
     [
@@ -31,7 +31,7 @@ const ctf: Ctf = {
       "web",
       "1",
       "★★★★",
-      "[link](https://blog.arkark.dev/2024/12/29/asisctf-finals/#web-fire-leak)",
+      "[link](https://blog.arkark.dev/2024/12/30/asisctf-finals/#web-fire-leak)",
       "XSLeak, ReDoS",
     ],
   ],

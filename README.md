@@ -24,8 +24,8 @@ Sat, 28 Dec. 2024, 14:00 UTC — Sun, 29 Dec. 2024, 14:00 UTC
 
 |Challenge|Category|Solved|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
-|[fetch-box](challenges/202412_ASIS_CTF_Finals_2024/web/fetch-box)|web, misc|19|★★|[link](https://blog.arkark.dev/2024/12/29/asisctf-finals/#web-misc-fetch-box)|fetch, sandbox|
-|[fire-leak](challenges/202412_ASIS_CTF_Finals_2024/web/fire-leak)|web|1|★★★★|[link](https://blog.arkark.dev/2024/12/29/asisctf-finals/#web-fire-leak)|XSLeak, ReDoS|
+|[fetch-box](challenges/202412_ASIS_CTF_Finals_2024/web/fetch-box)|web, misc|19|★★|[link](https://blog.arkark.dev/2024/12/30/asisctf-finals/#web-misc-fetch-box)|fetch, sandbox|
+|[fire-leak](challenges/202412_ASIS_CTF_Finals_2024/web/fire-leak)|web|1|★★★★|[link](https://blog.arkark.dev/2024/12/30/asisctf-finals/#web-fire-leak)|XSLeak, ReDoS|
 
 ## AlpacaHack Round 7 (Web)
 
