@@ -1,0 +1,15 @@
+services:
+  web:
+    build: ./web
+    restart: unless-stopped
+    init: true
+    ports:
+      - 3000:3000
+  bot:
+    build: ./bot
+    restart: unless-stopped
+    init: true
+    ports:
+      - 1337:1337
+    environment:
+      - FLAG=ASIS{Wh4t_HTML_elem3nts_and_a77ribut3s_did_you_u5e}

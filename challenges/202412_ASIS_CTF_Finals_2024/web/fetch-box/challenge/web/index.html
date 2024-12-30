@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<body>
+  <h1>XSS Playground</h1>
+  <script>
+    (() => {
+      const flag = localStorage.getItem("flag") ?? "🚩";
+      localStorage.removeItem("flag");
+
+      const fetch = Object.freeze(window.fetch);
+      const resource = `/ping?${new URLSearchParams({ flag })}`;
+      const options = Object.create(null);
+
+      const fun = () => fetch(resource, options);
+      setInterval(fun, 500);
+    })();
+
+    const params = new URLSearchParams(location.search);
+    const xss = params.get("xss") ?? "console.log(1337)";
+    setTimeout(xss, 800);
+  </script>
+</body>

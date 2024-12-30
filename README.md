@@ -4,6 +4,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ### ToC
 
+- [ASIS CTF Finals 2024](#asis-ctf-finals-2024)
 - [AlpacaHack Round 7 (Web)](#alpacahack-round-7-web)
 - [SECCON CTF 13 Quals](#seccon-ctf-13-quals)
 - [IERAE CTF 2024](#ierae-ctf-2024)
@@ -14,6 +15,17 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## ASIS CTF Finals 2024
+
+Sat, 28 Dec. 2024, 14:00 UTC — Sun, 29 Dec. 2024, 14:00 UTC
+
+- [CTFtime](https://ctftime.org/event/2403/)
+
+|Challenge|Category|Solved|Difficulty|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[fetch-box](challenges/202412_ASIS_CTF_Finals_2024/web/fetch-box)|web, misc|19|★★|[link](https://blog.arkark.dev/2024/12/29/asisctf-finals/#web-misc-fetch-box)|fetch, sandbox|
+|[fire-leak](challenges/202412_ASIS_CTF_Finals_2024/web/fire-leak)|web|1|★★★★|[link](https://blog.arkark.dev/2024/12/29/asisctf-finals/#web-fire-leak)|XSLeak, ReDoS|
 
 ## AlpacaHack Round 7 (Web)
 

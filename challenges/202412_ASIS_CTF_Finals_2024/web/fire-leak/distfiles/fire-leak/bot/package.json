@@ -1,0 +1,11 @@
+{
+  "name": "bot",
+  "author": "ark",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "playwright-firefox": "^1.49.1"
+  }
+}

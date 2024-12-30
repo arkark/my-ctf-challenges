@@ -1,0 +1,10 @@
+{
+  "name": "fire-leak",
+  "author": "ark",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.1"
+  }
+}

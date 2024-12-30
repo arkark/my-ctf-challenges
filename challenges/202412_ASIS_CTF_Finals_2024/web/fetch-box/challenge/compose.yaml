@@ -1,0 +1,15 @@
+services:
+  web:
+    build: ./web
+    restart: unless-stopped
+    init: true
+    ports:
+      - 3000:3000
+  bot:
+    build: ./bot
+    restart: unless-stopped
+    init: true
+    ports:
+      - 1337:1337
+    environment:
+      - FLAG=ASIS{I_can7_wai7_f0r_S1ay_the_Spire_2}
