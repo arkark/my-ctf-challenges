@@ -2,7 +2,6 @@ import type Ctf from "@/generator/Ctf.ts";
 
 const ctf: Ctf = {
   name: "ASIS CTF Finals 2024",
-  description: "Sat, 28 Dec. 2024, 14:00 UTC — Sun, 29 Dec. 2024, 14:00 UTC",
   links: [
     {
       label: "CTFtime",

@@ -2,7 +2,6 @@ import type Ctf from "@/generator/Ctf.ts";
 
 const ctf: Ctf = {
   name: "SECCON CTF 2023 Quals",
-  description: "Sat, 16 Sept. 2023, 05:00 UTC — Sun, 17 Sept. 2023, 05:00 UTC",
   links: [
     {
       label: "CTFtime",

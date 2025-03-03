@@ -2,8 +2,6 @@ import type Ctf from "@/generator/Ctf.ts";
 
 const ctf: Ctf = {
   name: "IERAE CTF 2024",
-
-  description: "Sat, 21 Sep. 2024, 06:00 UTC — Sun, 22 Sep. 2024, 06:00 UTC",
   links: [
     {
       label: "CTFtime",

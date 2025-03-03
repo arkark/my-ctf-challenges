@@ -37,10 +37,16 @@ const genCtfSection = function* (ctf: Ctf) {
     yield "";
   }
 
+  const links = [];
   for (const link of ctf.links) {
-    yield link.url ? `- [${link.label}](${link.url})` : `- ${link.label} (TBD)`;
+    links.push(
+      link.url ? `[${link.label}](${link.url})` : `${link.label} (TBD)`
+    );
   }
-  yield "";
+  if (links.length > 0) {
+    yield `Links: ${links.join(" / ")}`;
+    yield "";
+  }
 
   yield `|${ctf.columns.join("|")}|`;
   yield `|${":-:|".repeat(ctf.columns.length)}`;

@@ -2,8 +2,6 @@ import type Ctf from "@/generator/Ctf.ts";
 
 const ctf: Ctf = {
   name: "SECCON CTF 2023 Finals",
-
-  description: "Sat, 23 Dec. 2023, 01:00 UTC — Sun, 24 Dec. 2023, 09:00 UTC",
   links: [
     {
       label: "CTFtime (International)",

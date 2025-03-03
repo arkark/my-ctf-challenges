@@ -19,10 +19,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ## SECCON CTF 13 Finals
 
-Sat, 01 Mar. 2025, 10:00 JST — Sun, 02 Mar. 2025, 20:00 JST
-
-- [CTFtime (International)](https://ctftime.org/event/2649)
-- [CTFtime (Domestic)](https://ctftime.org/event/2650)
+Links: [CTFtime (International)](https://ctftime.org/event/2649) / [CTFtime (Domestic)](https://ctftime.org/event/2650)
 
 |Challenge|Category|Solved / 9<br>(International)|Solved / 9<br>(Domestic)|Difficulty|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -33,9 +30,7 @@ Sat, 01 Mar. 2025, 10:00 JST — Sun, 02 Mar. 2025, 20:00 JST
 
 ## ASIS CTF Finals 2024
 
-Sat, 28 Dec. 2024, 14:00 UTC — Sun, 29 Dec. 2024, 14:00 UTC
-
-- [CTFtime](https://ctftime.org/event/2403/)
+Links: [CTFtime](https://ctftime.org/event/2403/)
 
 |Challenge|Category|Solved|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -44,10 +39,9 @@ Sat, 28 Dec. 2024, 14:00 UTC — Sun, 29 Dec. 2024, 14:00 UTC
 
 ## AlpacaHack Round 7 (Web)
 
-**An individual competition in 6 hours:**<br>Sun, 30 Nov. 2024, 03:00 UTC — Sun, 30 Nov. 2024, 09:00 UTC
+An individual competition in 6 hours.
 
-- [CTFtime](https://ctftime.org/event/2544)
-- [Website](https://alpacahack.com/ctfs/round-7)
+Links: [CTFtime](https://ctftime.org/event/2544) / [Website](https://alpacahack.com/ctfs/round-7)
 
 |Challenge|Category|Solved|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|
@@ -58,9 +52,7 @@ Sat, 28 Dec. 2024, 14:00 UTC — Sun, 29 Dec. 2024, 14:00 UTC
 
 ## SECCON CTF 13 Quals
 
-Sat, 23 Nov. 2024, 05:00 UTC — Sun, 24 Nov. 2024, 05:00 UTC
-
-- [CTFtime](https://ctftime.org/event/2478/)
+Links: [CTFtime](https://ctftime.org/event/2478/)
 
 |Challenge|Category|Solved|Difficulty|Keywords|Co-Author|
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -74,9 +66,7 @@ Sat, 23 Nov. 2024, 05:00 UTC — Sun, 24 Nov. 2024, 05:00 UTC
 
 ## IERAE CTF 2024
 
-Sat, 21 Sep. 2024, 06:00 UTC — Sun, 22 Sep. 2024, 06:00 UTC
-
-- [CTFtime](https://ctftime.org/event/2441/)
+Links: [CTFtime](https://ctftime.org/event/2441/)
 
 |Challenge|Category|Solved|Difficulty|Keywords|
 |:-:|:-:|:-:|:-:|:-:|
@@ -85,10 +75,9 @@ Sat, 21 Sep. 2024, 06:00 UTC — Sun, 22 Sep. 2024, 06:00 UTC
 
 ## AlpacaHack Round 2 (Web)
 
-**An individual competition in 6 hours:**<br>Sun, 01 Sep. 2024, 03:00 UTC — Sun, 01 Sep. 2024, 09:00 UTC
+An individual competition in 6 hours.
 
-- [CTFtime](https://ctftime.org/event/2465)
-- [Website](https://alpacahack.com/ctfs/round-2)
+Links: [CTFtime](https://ctftime.org/event/2465) / [Website](https://alpacahack.com/ctfs/round-2)
 
 |Challenge|Category|Solved|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|
@@ -99,10 +88,7 @@ Sat, 21 Sep. 2024, 06:00 UTC — Sun, 22 Sep. 2024, 06:00 UTC
 
 ## SECCON CTF 2023 Finals
 
-Sat, 23 Dec. 2023, 01:00 UTC — Sun, 24 Dec. 2023, 09:00 UTC
-
-- [CTFtime (International)](https://ctftime.org/event/2159)
-- [CTFtime (Domestic)](https://ctftime.org/event/2160)
+Links: [CTFtime (International)](https://ctftime.org/event/2159) / [CTFtime (Domestic)](https://ctftime.org/event/2160)
 
 |Challenge|Category|Solved / 12<br>(International)|Solved / 12<br>(Domestic)|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -114,9 +100,9 @@ Sat, 23 Dec. 2023, 01:00 UTC — Sun, 24 Dec. 2023, 09:00 UTC
 
 ## IERAE DAYS CTF 2023
 
-**An onsite local event:**<br>Thu, 7 Dec. 2023
+An onsite local event: Thu, 7 Dec. 2023
 
-- [Repository](https://github.com/gmo-ierae/ierae-days-ctf-2023)
+Links: [Repository](https://github.com/gmo-ierae/ierae-days-ctf-2023)
 
 |Challenge|Category|Keywords|
 |:-:|:-:|:-:|
@@ -124,9 +110,7 @@ Sat, 23 Dec. 2023, 01:00 UTC — Sun, 24 Dec. 2023, 09:00 UTC
 
 ## SECCON CTF 2023 Quals
 
-Sat, 16 Sept. 2023, 05:00 UTC — Sun, 17 Sept. 2023, 05:00 UTC
-
-- [CTFtime](https://ctftime.org/event/2003/)
+Links: [CTFtime](https://ctftime.org/event/2003/)
 
 |Challenge|Category|Solved / 653|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -139,10 +123,7 @@ Sat, 16 Sept. 2023, 05:00 UTC — Sun, 17 Sept. 2023, 05:00 UTC
 
 ## SECCON CTF 2022 Finals
 
-Sat, 11 Feb. 2023, 01:00 UTC — Sun, 12 Feb. 2023, 09:00 UTC
-
-- [CTFtime (International)](https://ctftime.org/event/1864)
-- [CTFtime (Domestic)](https://ctftime.org/event/1863)
+Links: [CTFtime (International)](https://ctftime.org/event/1864) / [CTFtime (Domestic)](https://ctftime.org/event/1863)
 
 |Challenge|Category|Solved / 10<br>(International)|Solved / 12<br>(Domestic)|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -154,9 +135,7 @@ Sat, 11 Feb. 2023, 01:00 UTC — Sun, 12 Feb. 2023, 09:00 UTC
 
 ## SECCON CTF 2022 Quals
 
-Sat, 12 Nov. 2022, 05:00 UTC — Sun, 13 Nov. 2022, 05:00 UTC
-
-- [CTFtime](https://ctftime.org/event/1764)
+Links: [CTFtime](https://ctftime.org/event/1764)
 
 |Challenge|Category|Solved / 726|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -172,9 +151,7 @@ Sat, 12 Nov. 2022, 05:00 UTC — Sun, 13 Nov. 2022, 05:00 UTC
 
 ## SECCON CTF 2021
 
-Sat, 11 Dec. 2021, 05:00 UTC — Sun, 12 Dec. 2021, 05:00 UTC
-
-- [CTFtime](https://ctftime.org/event/1458)
+Links: [CTFtime](https://ctftime.org/event/1458)
 
 |Challenge|Category|Solved / 506|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|

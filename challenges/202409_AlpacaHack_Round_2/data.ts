@@ -3,8 +3,7 @@ import type Ctf from "@/generator/Ctf.ts";
 const ctf: Ctf = {
   name: "AlpacaHack Round 2 (Web)",
 
-  description:
-    "**An individual competition in 6 hours:**<br>Sun, 01 Sep. 2024, 03:00 UTC — Sun, 01 Sep. 2024, 09:00 UTC",
+  description: "An individual competition in 6 hours.",
   links: [
     {
       label: "CTFtime",

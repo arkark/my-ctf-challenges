@@ -2,7 +2,6 @@ import type Ctf from "@/generator/Ctf.ts";
 
 const ctf: Ctf = {
   name: "SECCON CTF 2021",
-  description: "Sat, 11 Dec. 2021, 05:00 UTC — Sun, 12 Dec. 2021, 05:00 UTC",
   links: [
     {
       label: "CTFtime",
