@@ -47,7 +47,7 @@ const ctf: Ctf = {
       "jail",
       "41",
       "★",
-      "JavaScript, prototype pollution",
+      "jsf**k, prototype pollution",
       "N/A",
     ],
     [
