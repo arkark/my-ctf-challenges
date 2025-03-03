@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="trusted-types default dompurify; require-trusted-types-for 'script'"
+    />
+    <title>Witch Note</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simpledotcss/2.3.3/simple.min.css"
+      integrity="sha512-rdDUVTXxEhS8tMTAZfbN/vADCfDW7wRFlvWLQEG6OElbwzH/6v4Df+6PfwYfwZ72Pj5XAoXUWadq101DpmxopA=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.3/purify.min.js"
+      integrity="sha512-Ll+TuDvrWDNNRnFFIM8dOiw7Go7dsHyxRp4RutiIFW/wm3DgDmCnRZow6AqbXnCbpWu93yM1O34q+4ggzGeXVA=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/purl/2.3.1/purl.min.js"
+      integrity="sha512-xbWNJpa0EduIPOwctW2N6KjW1KAWai6wEfiC3bafkJZyd0X3Q3n5yDTXHd21MIostzgLTwhxjEH+l9a5j3RB4A=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wretch/2.11.0/wretch.min.js"
+      integrity="sha512-oSgSsUNZSIZFxXfdSsnuujwxKrR+hFhxXajmRS6WmXgjNcpv1dWCpXC/VaLzWdTe29nA5TAkMN0KXFtBSEUVwg=="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Witch Note 🧙‍♀️</h1>
+
+    <form id="create">
+      <label>Title</label>
+      <input type="text" name="title" maxlength="25" required />
+      <label>Content</label>
+      <input type="text" name="content" maxlength="5000" required />
+      <br />
+      <button type="submit">Post</button>
+    </form>
+
+    <main id="note"></main>
+    <template id="noteTmpl">
+      <article>
+        <h2 id="title"></h2>
+        <p id="content"></p>
+      </article>
+    </template>
+
+    <ul id="list"></ul>
+
+    <script>
+      trustedTypes.createPolicy("default", {
+        createHTML: (unsafe) => DOMPurify.sanitize(unsafe),
+      });
+    </script>
+
+    <script>
+      const $ = document.getElementById.bind(document);
+
+      $("create").onsubmit = async (event) => {
+        event.preventDefault();
+
+        const data = Object.fromEntries(new FormData($("create")));
+        await wretch("/create").post(data).json();
+        refresh();
+      };
+
+      const renderNote = async (id) => {
+        const { title, content } = await wretch(`/notes/${id}.json`).get().json();
+
+        const elm = $("noteTmpl").content.cloneNode(true);
+        elm.getElementById("title").innerHTML = title;
+        elm.getElementById("content").innerHTML = content;
+        $("note").innerHTML = "";
+        $("note").appendChild(elm);
+      };
+
+      const renderList = async (currentId) => {
+        const noteIds = await wretch("/notes").get().json();
+
+        const fragment = document.createDocumentFragment();
+        for (const id of noteIds) {
+          const head = id === currentId ? "★ " : "";
+          const elm = document.createElement("li");
+          elm.innerHTML = `${head}<a href="/?id=${id}">${id}</a>`;
+          fragment.appendChild(elm);
+        }
+        $("list").innerHTML = "";
+        $("list").appendChild(fragment);
+      };
+
+      const refresh = () => {
+        const { id } = purl(location.href).param();
+        id && renderNote(id);
+        renderList(id);
+      };
+
+      refresh();
+    </script>
+  </body>
+</html>

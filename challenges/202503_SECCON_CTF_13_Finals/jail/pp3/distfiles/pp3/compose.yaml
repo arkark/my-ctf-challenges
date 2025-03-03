@@ -1,0 +1,7 @@
+services:
+  sandbox:
+    build: .
+    restart: unless-stopped
+    ports:
+      - 5000:5000
+    privileged: true

@@ -1,0 +1,9 @@
+{
+  "name": "web",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "fastify": "^5.2.1",
+    "sanitize-html": "^2.14.0"
+  }
+}

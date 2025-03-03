@@ -4,6 +4,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ### ToC
 
+- [SECCON CTF 13 Finals](#seccon-ctf-13-finals)
 - [ASIS CTF Finals 2024](#asis-ctf-finals-2024)
 - [AlpacaHack Round 7 (Web)](#alpacahack-round-7-web)
 - [SECCON CTF 13 Quals](#seccon-ctf-13-quals)
@@ -15,6 +16,20 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## SECCON CTF 13 Finals
+
+Sat, 01 Mar. 2025, 10:00 JST — Sun, 02 Mar. 2025, 20:00 JST
+
+- [CTFtime (International)](https://ctftime.org/event/2649)
+- [CTFtime (Domestic)](https://ctftime.org/event/2650)
+
+|Challenge|Category|Solved / 9<br>(International)|Solved / 9<br>(Domestic)|Difficulty|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[purexss](challenges/202503_SECCON_CTF_13_Finals/web/purexss)|web|4|1|★★|XSS, ISO-2022-JP|
+|[twisty-xss](challenges/202503_SECCON_CTF_13_Finals/web/twisty-xss)|web|3|0|★★★|XSS, puzzle|
+|[witchnote](challenges/202503_SECCON_CTF_13_Finals/web/witchnote)|web|1|0|★★★|XSS, disk cache|
+|[pp3](challenges/202503_SECCON_CTF_13_Finals/jail/pp3)|jail|0|0|★★★|jsf**k, prototype pollution|
 
 ## ASIS CTF Finals 2024
 
@@ -52,7 +67,7 @@ Sat, 23 Nov. 2024, 05:00 UTC — Sun, 24 Nov. 2024, 05:00 UTC
 |[Trillion Bank](challenges/202411_SECCON_CTF_13_Quals/web/trillion-bank)|web|84|★|MySQL|N/A|
 |[self-ssrf](challenges/202411_SECCON_CTF_13_Quals/web/self-ssrf)|web|23|★★|URL parser, Bun|N/A|
 |[double-parser](challenges/202411_SECCON_CTF_13_Quals/web/double-parser)|web|17|★★|HTML parser, XSS|N/A|
-|[pp4](challenges/202411_SECCON_CTF_13_Quals/jail/pp4)|jail|41|★|JavaScript, prototype pollution|N/A|
+|[pp4](challenges/202411_SECCON_CTF_13_Quals/jail/pp4)|jail|41|★|jsf**k, prototype pollution|N/A|
 |[1linepyjail](challenges/202411_SECCON_CTF_13_Quals/jail/1linepyjail)|jail|15|★★|pyjail|N/A|
 |[Go to Jail](challenges/202411_SECCON_CTF_13_Quals/jail/go-to-jail)|jail|6|★★★|Go, polyglot, code golf|N/A|
 |[voidbox](challenges/202411_SECCON_CTF_13_Quals/jail/voidbox)|jail|3|★★★★★|JavaScript, sandbox escape|[Satoooon](https://x.com/Satoooon1024)|
