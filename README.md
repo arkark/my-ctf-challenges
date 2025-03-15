@@ -45,7 +45,7 @@ Links: [CTFtime](https://ctftime.org/event/2544) / [Website](https://alpacahack.
 
 |Challenge|Category|Solved|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|
-|[Treasure Hunt](challenges/202411_AlpacaHack_Round_7/web/treasure-hunt)|web|71|[link (ja)](https://blog.arkark.dev/2024/12/01/alpacahack-round-7/#Treasure-Hunt)|URL encoding|
+|[Treasure Hunt](challenges/202411_AlpacaHack_Round_7/web/treasure-hunt)|web|71|[link (ja)](https://blog.arkark.dev/2024/12/01/alpacahack-round-7/#treasure-hunt)|URL encoding|
 |[minimal-waf](challenges/202411_AlpacaHack_Round_7/web/minimal-waf)|web|4|[link (ja)](https://blog.arkark.dev/2024/12/01/alpacahack-round-7/#minimal-waf)|XSS|
 |[disconnection](challenges/202411_AlpacaHack_Round_7/web/disconnection)|web|5|TODO|browser behavior|
 |[disconnection-revenge](challenges/202411_AlpacaHack_Round_7/web/disconnection-revenge)|web|1|TODO|browser behavior|
@@ -81,10 +81,10 @@ Links: [CTFtime](https://ctftime.org/event/2465) / [Website](https://alpacahack.
 
 |Challenge|Category|Solved|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|
-|[Simple Login](challenges/202409_AlpacaHack_Round_2/web/simple-login)|web|84|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#Simple-Login)|SQL injection|
-|[Pico Note 1](challenges/202409_AlpacaHack_Round_2/web/pico-note-1)|web|10|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#Pico-Note-1)|CSP bypass, JavaScript|
-|[CaaS](challenges/202409_AlpacaHack_Round_2/web/caas)|web|13|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#CaaS)|RCE, Perl|
-|[Pico Note 2](challenges/202409_AlpacaHack_Round_2/web/pico-note-2)|web|3|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#Pico-Note-2)|Import Maps|
+|[Simple Login](challenges/202409_AlpacaHack_Round_2/web/simple-login)|web|84|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#simple-login)|SQL injection|
+|[Pico Note 1](challenges/202409_AlpacaHack_Round_2/web/pico-note-1)|web|10|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#pico-note-1)|CSP bypass, JavaScript|
+|[CaaS](challenges/202409_AlpacaHack_Round_2/web/caas)|web|13|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#caas)|RCE, Perl|
+|[Pico Note 2](challenges/202409_AlpacaHack_Round_2/web/pico-note-2)|web|3|[link (ja)](https://blog.arkark.dev/2024/09/04/alpacahack-round-2/#pico-note-2)|Import Maps|
 
 ## SECCON CTF 2023 Finals
 
@@ -94,8 +94,8 @@ Links: [CTFtime (International)](https://ctftime.org/event/2159) / [CTFtime (Dom
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |[babywaf](challenges/202312_SECCON_CTF_2023_Finals/web/babywaf)|web|8|4|★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-babywaf)|WAF bypass|
 |[cgi-2023](challenges/202312_SECCON_CTF_2023_Finals/web/cgi-2023)|web|5|2|★★★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-cgi-2023)|XS-Leak, subresource integrity|
-|[LemonMD](challenges/202312_SECCON_CTF_2023_Finals/web/lemonmd)|web|2|1|★★★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-LemonMD)|Fresh, Islands Architecture|
-|[DOMLeakify](challenges/202312_SECCON_CTF_2023_Finals/web/domleakify)|web|1|0|★★★★★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-DOMLeakify)|CSS injection on style attributes|
+|[LemonMD](challenges/202312_SECCON_CTF_2023_Finals/web/lemonmd)|web|2|1|★★★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-lemonmd)|Fresh, Islands Architecture|
+|[DOMLeakify](challenges/202312_SECCON_CTF_2023_Finals/web/domleakify)|web|1|0|★★★★★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-domleakify)|CSS injection on style attributes|
 |[whitespace.js](challenges/202312_SECCON_CTF_2023_Finals/misc/whitespace-js)|misc|2|2|★★|[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#misc-whitespace-js)|JavaScript sandbox|
 
 ## IERAE DAYS CTF 2023
@@ -129,7 +129,7 @@ Links: [CTFtime (International)](https://ctftime.org/event/1864) / [CTFtime (Dom
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |[babybox](challenges/202302_SECCON_CTF_2022_Finals/web/babybox)|web|6|4|★|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-100-babybox)|prototype pollution|
 |[easylfi2](challenges/202302_SECCON_CTF_2022_Finals/web/easylfi2)|web|10|8|★|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-200-easylfi2)|LFI, curl|
-|[MaaS](challenges/202302_SECCON_CTF_2022_Finals/web/maas)|web|3|1|★★★|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-MaaS)|newline normalization, CSP bypass|
+|[MaaS](challenges/202302_SECCON_CTF_2022_Finals/web/maas)|web|3|1|★★★|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-maas)|newline normalization, CSP bypass|
 |[light-note](challenges/202302_SECCON_CTF_2022_Finals/web/light-note)|web|0|0|★★★|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-light-note)|DOM clobbering, Sanitizer API|
 |[dark-note](challenges/202302_SECCON_CTF_2022_Finals/web/dark-note)|web|0|0|★★★★|[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-500-dark-note)|time-based oracle|
 
@@ -155,8 +155,8 @@ Links: [CTFtime](https://ctftime.org/event/1458)
 
 |Challenge|Category|Solved / 506|Difficulty|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|:-:|
-|[Sequence as a Service 1](challenges/202112_SECCON_CTF_2021/web/sequence-as-a-service-1)|web|20|★★|[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-1)|JavaScript sandbox|
-|[Sequence as a Service 2](challenges/202112_SECCON_CTF_2021/web/sequence-as-a-service-2)|web|19|★|[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-2)|JavaScript sandbox|
-|[Cookie Spinner](challenges/202112_SECCON_CTF_2021/web/cookie-spinner)|web|7|★★★|[link](https://blog.arkark.dev/2021/12/22/seccon/#Cookie-Spinner)|DOM clobbering|
+|[Sequence as a Service 1](challenges/202112_SECCON_CTF_2021/web/sequence-as-a-service-1)|web|20|★★|[link](https://blog.arkark.dev/2021/12/22/seccon/#sequence-as-a-service-1)|JavaScript sandbox|
+|[Sequence as a Service 2](challenges/202112_SECCON_CTF_2021/web/sequence-as-a-service-2)|web|19|★|[link](https://blog.arkark.dev/2021/12/22/seccon/#sequence-as-a-service-2)|JavaScript sandbox|
+|[Cookie Spinner](challenges/202112_SECCON_CTF_2021/web/cookie-spinner)|web|7|★★★|[link](https://blog.arkark.dev/2021/12/22/seccon/#cookie-spinner)|DOM clobbering|
 |[x-note](challenges/202112_SECCON_CTF_2021/web/x-note)|web|3|★★★★|[link](https://blog.arkark.dev/2021/12/22/seccon/#x-note)|XS-Search|
 

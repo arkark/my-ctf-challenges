@@ -46,7 +46,7 @@ const ctf: Ctf = {
       "3",
       "1",
       "★★★",
-      "[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-MaaS)",
+      "[link](https://blog.arkark.dev/2023/02/17/seccon-finals/#web-300-maas)",
       "newline normalization, CSP bypass",
     ],
     [

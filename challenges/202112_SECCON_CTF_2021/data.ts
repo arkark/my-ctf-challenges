@@ -22,7 +22,7 @@ const ctf: Ctf = {
       "web",
       "20",
       "★★",
-      "[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-1)",
+      "[link](https://blog.arkark.dev/2021/12/22/seccon/#sequence-as-a-service-1)",
       "JavaScript sandbox",
     ],
     [
@@ -30,7 +30,7 @@ const ctf: Ctf = {
       "web",
       "19",
       "★",
-      "[link](https://blog.arkark.dev/2021/12/22/seccon/#Sequence-as-a-Service-2)",
+      "[link](https://blog.arkark.dev/2021/12/22/seccon/#sequence-as-a-service-2)",
       "JavaScript sandbox",
     ],
     [
@@ -38,7 +38,7 @@ const ctf: Ctf = {
       "web",
       "7",
       "★★★",
-      "[link](https://blog.arkark.dev/2021/12/22/seccon/#Cookie-Spinner)",
+      "[link](https://blog.arkark.dev/2021/12/22/seccon/#cookie-spinner)",
       "DOM clobbering",
     ],
     [

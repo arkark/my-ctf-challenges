@@ -46,7 +46,7 @@ const ctf: Ctf = {
       "2",
       "1",
       "★★★",
-      "[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-LemonMD)",
+      "[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-lemonmd)",
       "Fresh, Islands Architecture",
     ],
     [
@@ -55,7 +55,7 @@ const ctf: Ctf = {
       "1",
       "0",
       "★★★★★",
-      "[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-DOMLeakify)",
+      "[link](https://blog.arkark.dev/2023/12/28/seccon-finals/#web-domleakify)",
       "CSS injection on style attributes",
     ],
     [

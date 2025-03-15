@@ -19,7 +19,7 @@ const ctf: Ctf = {
       "[Treasure Hunt](challenges/202411_AlpacaHack_Round_7/web/treasure-hunt)",
       "web",
       "71",
-      "[link (ja)](https://blog.arkark.dev/2024/12/01/alpacahack-round-7/#Treasure-Hunt)",
+      "[link (ja)](https://blog.arkark.dev/2024/12/01/alpacahack-round-7/#treasure-hunt)",
       "URL encoding",
     ],
     [
