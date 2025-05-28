@@ -1,0 +1,8 @@
+services:
+  jackpot:
+    build: ./web
+    restart: unless-stopped
+    ports:
+      - ${PORT:-3000}:3000
+    environment:
+      - FLAG=Alpaca{REDACTED}

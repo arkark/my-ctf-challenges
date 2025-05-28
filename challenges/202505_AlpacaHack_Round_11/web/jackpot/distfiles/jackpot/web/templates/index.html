@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html data-theme="light">
+  <head>
+    <meta name="color-scheme" content="only light" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+      integrity="sha256-Z/om3xyp6V2PKtx8BPobFfo9JCV0cOvBDMaLmquRS+4="
+      crossorigin="anonymous"
+    />
+    <title>Slot machine</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.12.0/dist/js-confetti.browser.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bulma-toast@2.4.4/dist/bulma-toast.min.js"
+      integrity="sha256-adP3k/8tMPv7px6l0xCXafWhlym6utSNHxOY9egctJY="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container is-max-tablet has-text-centered">
+        <h1 class="title">🎰 Slot Machine 🎰</h1>
+        <div class="fixed-grid has-5-cols">
+          <div class="grid is-size-1">
+            <div class="cell"><div id="result-0" class="card">0</div></div>
+            <div class="cell"><div id="result-1" class="card">0</div></div>
+            <div class="cell"><div id="result-2" class="card">0</div></div>
+            <div class="cell"><div id="result-3" class="card">0</div></div>
+            <div class="cell"><div id="result-4" class="card">0</div></div>
+            <div class="cell"><div id="result-5" class="card">0</div></div>
+            <div class="cell"><div id="result-6" class="card">0</div></div>
+            <div class="cell"><div id="result-7" class="card">0</div></div>
+            <div class="cell"><div id="result-8" class="card">0</div></div>
+            <div class="cell"><div id="result-9" class="card">0</div></div>
+            <div class="cell"><div id="result-10" class="card">0</div></div>
+            <div class="cell"><div id="result-11" class="card">0</div></div>
+            <div class="cell"><div id="result-12" class="card">0</div></div>
+            <div class="cell"><div id="result-13" class="card">0</div></div>
+            <div class="cell"><div id="result-14" class="card">0</div></div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input
+              id="candidates"
+              class="input has-text-centered"
+              type="text"
+              value="0123456789"
+              required
+            />
+          </div>
+          <p id="error" class="help is-danger"></p>
+        </div>
+        <button id="slot" class="button is-dark">Slot</button>
+      </div>
+    </section>
+    <script>
+      const $ = document.getElementById.bind(document);
+      const jsConfetti = new JSConfetti();
+
+      const showError = (message) => {
+        $("candidates").classList.add("is-danger");
+        $("error").textContent = message;
+      };
+
+      const showResult = ({ results, isJackpot, flag }) => {
+        $("candidates").classList.remove("is-danger");
+        $("error").textContent = "";
+
+        for (const [i, result] of Object.entries(results)) {
+          const elm = $(`result-${i}`);
+          elm.textContent = result;
+          if (result === 7) {
+            elm.classList.add(
+              "has-text-weight-bold",
+              "has-text-danger",
+              "has-background-warning-light"
+            );
+          } else {
+            elm.classList.remove(
+              "has-text-weight-bold",
+              "has-text-danger",
+              "has-background-warning-light"
+            );
+          }
+        }
+
+        if (isJackpot) {
+          const message = `<p class="is-size-2 has-text-weight-bold">Jackpot! ${flag}</p>`;
+          bulmaToast.toast({
+            message,
+            position: "center",
+            type: "is-warning",
+            duration: 8000,
+            single: true,
+            pauseOnHover: true,
+          });
+          jsConfetti.addConfetti();
+        }
+      };
+
+      $("slot").addEventListener("click", async () => {
+        const candidates = $("candidates").value;
+        if (!candidates) return;
+
+        const json = await fetch(`/slot?candidates=${candidates}`).then((r) => r.json());
+        if (json.code !== 200) {
+          showError(json.description);
+          return;
+        }
+
+        showResult(json);
+      });
+    </script>
+  </body>
+</html>

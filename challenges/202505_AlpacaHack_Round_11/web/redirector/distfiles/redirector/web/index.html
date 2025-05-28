@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirector</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simpledotcss/2.3.4/simple.min.css"
+      integrity="sha512-as+s/bEqLr8d1uhWe7Sho5Z2ml15/Azf5/mWs5RPZyI8T5fagXNiF39g4n1ao9R3/9dcgmlWh8eCyoGR2WeRUw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Redirector</h1>
+      <form action="/" method="get">
+        <p>
+          <label>URL</label>
+          <input
+            type="text"
+            name="next"
+            placeholder="https://example.com"
+            required
+          />
+        </p>
+        <button type="submit">Redirect</button>
+      </form>
+    </main>
+    <script>
+      (() => {
+        const next = new URLSearchParams(location.search).get("next");
+        if (!next) return;
+
+        const url = new URL(next, location.origin);
+        const parts = [url.pathname, url.search, url.hash];
+
+        if (parts.some((part) => /[^\w()]/.test(part.slice(1)))) {
+          alert("Invalid URL 1");
+          return;
+        }
+        if (/location|name|cookie|eval|Function|constructor|%/i.test(url)) {
+          alert("Invalid URL 2");
+          return;
+        }
+
+        location.href = url;
+      })();
+    </script>
+  </body>
+</html>

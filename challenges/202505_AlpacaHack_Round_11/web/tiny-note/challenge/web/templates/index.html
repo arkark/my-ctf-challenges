@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+    />
+    <title>Tiny Note</title>
+  </head>
+  <body>
+    <main>
+      <h1>Tiny Note</h1>
+      <form action="/new" method="post">
+        <fieldset>
+          <label>
+            Title
+            <input name="title" type="text" minlength="1" maxlength="64" />
+          </label>
+          <label>
+            Content
+            <textarea name="content" minlength="1" maxlength="24"></textarea>
+          </label>
+        </fieldset>
+        <input type="submit" value="Create" />
+      </form>
+    </main>
+  </body>
+</html>

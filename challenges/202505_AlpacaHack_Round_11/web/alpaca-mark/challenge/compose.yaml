@@ -1,0 +1,15 @@
+services:
+  alpaca-mark:
+    build: ./web
+    restart: unless-stopped
+    init: true
+    ports:
+      - ${PORT_WEB:-3000}:3000
+  alpaca-mark-bot:
+    build: ./bot
+    restart: unless-stopped
+    init: true
+    ports:
+      - ${PORT_BOT:-1337}:1337
+    environment:
+      - FLAG=Alpaca{the_DOM_w0rld_is_po11uted_and_clobber3d}

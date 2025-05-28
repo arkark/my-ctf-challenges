@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>AlpacaMark</title>
+    <script nonce="<%= nonce %>" src="/main.js" defer></script>
+    <link href="/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>AlpacaMark</h1>
+      <div id="previewElm"></div>
+      <form id="renderElm" action="/" method="get">
+        <textarea name="markdown" required><%- markdown %></textarea>
+        <button type="submit">Render</button>
+      </form>
+    </main>
+  </body>
+</html>

@@ -3,7 +3,7 @@
     "@/": "./"
   },
   "tasks": {
-    "watch": "flask --app generator/preview run & GRIP=$! && deno run --watch --no-clear-screen --allow-read=. --allow-write=README.md generator/main.ts; kill $GRIP",
+    "watch": "uv run flask --app generator/preview run & GRIP=$! && deno run --watch --no-clear-screen --allow-read=. --allow-write=README.md generator/main.ts; kill $GRIP",
     "build": "deno run --allow-read=. --allow-write=README.md generator/main.ts"
   }
 }

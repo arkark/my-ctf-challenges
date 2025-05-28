@@ -4,6 +4,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ### ToC
 
+- [AlpacaHack Round 11 (Web)](#alpacahack-round-11-web)
 - [SECCON CTF 13 Finals](#seccon-ctf-13-finals)
 - [ASIS CTF Finals 2024](#asis-ctf-finals-2024)
 - [AlpacaHack Round 7 (Web)](#alpacahack-round-7-web)
@@ -16,6 +17,20 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## AlpacaHack Round 11 (Web)
+
+An individual competition in 6 hours.
+
+Links: [CTFtime](https://ctftime.org/event/2710) / [Website](https://alpacahack.com/ctfs/round-11)
+
+|Challenge|Category|Solved|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|
+|[Jackpot](challenges/202505_AlpacaHack_Round_11/web/jackpot)|web|63|TODO|Python, Unicode|
+|[Redirector](challenges/202505_AlpacaHack_Round_11/web/redirector)|web|6|TODO|XSS, JavaScript|
+|[Tiny Note](challenges/202505_AlpacaHack_Round_11/web/tiny-note)|web|4|TODO|pickle|
+|[AlpacaMark](challenges/202505_AlpacaHack_Round_11/web/alpaca-mark)|web|3|TODO|DOM Clobbering, PP, iframe|
+|[AlpacaMark Revenge](challenges/202505_AlpacaHack_Round_11/web/alpaca-mark-revenge)|web|(Published after the CTF)|TODO|DOM Clobbering, PP, iframe|
 
 ## SECCON CTF 13 Finals
 
