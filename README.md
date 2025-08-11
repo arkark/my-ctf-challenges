@@ -26,11 +26,11 @@ Links: [CTFtime](https://ctftime.org/event/2710) / [Website](https://alpacahack.
 
 |Challenge|Category|Solved|Writeup|Keywords|
 |:-:|:-:|:-:|:-:|:-:|
-|[Jackpot](challenges/202505_AlpacaHack_Round_11/web/jackpot)|web|63|TODO|Python, Unicode|
-|[Redirector](challenges/202505_AlpacaHack_Round_11/web/redirector)|web|6|TODO|XSS, JavaScript|
-|[Tiny Note](challenges/202505_AlpacaHack_Round_11/web/tiny-note)|web|4|TODO|pickle|
-|[AlpacaMark](challenges/202505_AlpacaHack_Round_11/web/alpaca-mark)|web|3|TODO|DOM Clobbering, PP, iframe|
-|[AlpacaMark Revenge](challenges/202505_AlpacaHack_Round_11/web/alpaca-mark-revenge)|web|(Published after the CTF)|TODO|DOM Clobbering, PP, iframe|
+|[Jackpot](challenges/202505_AlpacaHack_Round_11/web/jackpot)|web|63||Python, Unicode|
+|[Redirector](challenges/202505_AlpacaHack_Round_11/web/redirector)|web|6||XSS, JavaScript|
+|[Tiny Note](challenges/202505_AlpacaHack_Round_11/web/tiny-note)|web|4||pickle|
+|[AlpacaMark](challenges/202505_AlpacaHack_Round_11/web/alpaca-mark)|web|3|[link](https://blog.arkark.dev/2025/05/30/alpaca-mark)|DOM Clobbering, PP, iframe|
+|[AlpacaMark Revenge](challenges/202505_AlpacaHack_Round_11/web/alpaca-mark-revenge)|web|(Published after the CTF)|[link](https://blog.arkark.dev/2025/05/30/alpaca-mark)|DOM Clobbering, PP, iframe|
 
 ## SECCON CTF 13 Finals
 
