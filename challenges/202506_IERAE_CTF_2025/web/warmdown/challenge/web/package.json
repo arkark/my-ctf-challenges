@@ -1,0 +1,10 @@
+{
+  "name": "web",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@fastify/static": "^8.2.0",
+    "fastify": "^5.3.3",
+    "marked": "^15.0.12"
+  }
+}

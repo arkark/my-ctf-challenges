@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<body>
+  <h1>XSS Playground</h1>
+  <script>
+    (() => {
+      const flag = localStorage.getItem("flag") ?? "this_is_a_flag";
+      localStorage.removeItem("flag");
+
+      const canvas = document.createElement("canvas");
+      canvas.id = "flag";
+      canvas.getContext("2d").font = `1px "${flag}"`; // :)
+      document.body.appendChild(canvas);
+
+      delete window.open;
+
+      const removeKey = (obj, key) => {
+        delete obj[key];
+        if (key in obj) {
+          Object.defineProperty(obj, key, {});
+        }
+      };
+
+      for (const descriptor of Object.values(
+        Object.getOwnPropertyDescriptors(window)
+      )) {
+        const value = descriptor.value;
+        const prototype = value?.prototype;
+
+        if (prototype instanceof Node || value === DOMParser) {
+          // Delete all the properties
+          for (const key of Object.getOwnPropertyNames(value)) {
+            removeKey(value, key);
+          }
+          for (const key of Object.getOwnPropertyNames(prototype)) {
+            removeKey(prototype, key);
+          }
+        }
+      }
+    })();
+
+    const params = new URLSearchParams(location.search);
+    const xss = params.get("xss") ?? "console.log(1337)";
+
+    eval(xss); // Get the flag!
+  </script>
+</body>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Warmdown</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simpledotcss@2.3.5/simple.min.css"
+      integrity="sha256-jB3eicSYINO80mYegnfqO40htZSvsa9Fbv7Je5fgIDo="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>Warmdown</h1>
+
+    <form action="/" method="get">
+      <textarea
+        id="markdown"
+        name="markdown"
+        maxlength="1024"
+        required
+      ></textarea>
+      <button type="submit">Render</button>
+    </form>
+
+    <main id="preview"></main>
+    <template id="template">
+      <h3>Preview</h3>
+      <article id="preview"></article>
+      <h3>HTML</h3>
+      <pre><code id="html"></code></pre>
+    </template>
+
+    <script type="module">
+      const $ = document.getElementById.bind(document);
+
+      const markdown = new URLSearchParams(location.search).get("markdown");
+      if (markdown) {
+        $("markdown").value = markdown;
+
+        const { escaped, unescaped } = await fetch(
+          `/render?${new URLSearchParams({ markdown })}`
+        ).then((r) => r.json());
+
+        const elm = $("template").content.cloneNode(true);
+        elm.getElementById("preview").innerHTML = unescaped;
+        elm.getElementById("html").innerHTML = escaped;
+        $("preview").appendChild(elm);
+      }
+
+      $("markdown").value ||= `
+## Markdown Demo
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- Curabitur ullamcorper egestas dapibus.
+`.trimStart();
+
+      $("markdown").rows = $("markdown").value.split("\n").length;
+    </script>
+  </body>
+</html>

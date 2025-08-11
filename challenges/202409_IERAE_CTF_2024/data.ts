@@ -8,13 +8,21 @@ const ctf: Ctf = {
       url: "https://ctftime.org/event/2441/",
     },
   ],
-  columns: ["Challenge", "Category", "Solved", "Difficulty", "Keywords"],
+  columns: [
+    "Challenge",
+    "Category",
+    "Solved",
+    "Difficulty",
+    "writeup",
+    "Keywords",
+  ],
   challenges: [
     [
       "[5](challenges/202409_IERAE_CTF_2024/misc/five)",
       "misc",
       "8",
       "★",
+      "-",
       "Bun",
     ],
     [
@@ -22,6 +30,7 @@ const ctf: Ctf = {
       "web",
       "3",
       "★★★★",
+      "[link (ja)](https://gmo-cybersecurity.com/blog/ierae-ctf-2024-writeup-web/#leakleakleak)",
       "XS-Leak, CSP",
     ],
   ],
