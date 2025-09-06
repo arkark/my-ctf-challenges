@@ -23,7 +23,7 @@ const ctf: Ctf = {
       "84",
       "★",
       "MySQL",
-      "N/A",
+      "",
     ],
     [
       "[self-ssrf](challenges/202411_SECCON_CTF_13_Quals/web/self-ssrf)",
@@ -31,7 +31,7 @@ const ctf: Ctf = {
       "23",
       "★★",
       "URL parser, Bun",
-      "N/A",
+      "",
     ],
     [
       "[double-parser](challenges/202411_SECCON_CTF_13_Quals/web/double-parser)",
@@ -39,7 +39,7 @@ const ctf: Ctf = {
       "17",
       "★★",
       "HTML parser, XSS",
-      "N/A",
+      "",
     ],
     [
       "[pp4](challenges/202411_SECCON_CTF_13_Quals/jail/pp4)",
@@ -47,7 +47,7 @@ const ctf: Ctf = {
       "41",
       "★",
       "jsf**k, prototype pollution",
-      "N/A",
+      "",
     ],
     [
       "[1linepyjail](challenges/202411_SECCON_CTF_13_Quals/jail/1linepyjail)",
@@ -55,7 +55,7 @@ const ctf: Ctf = {
       "15",
       "★★",
       "pyjail",
-      "N/A",
+      "",
     ],
     [
       "[Go to Jail](challenges/202411_SECCON_CTF_13_Quals/jail/go-to-jail)",
@@ -63,13 +63,13 @@ const ctf: Ctf = {
       "6",
       "★★★",
       "Go, polyglot, code golf",
-      "N/A",
+      "",
     ],
     [
       "[voidbox](challenges/202411_SECCON_CTF_13_Quals/jail/voidbox)",
       "jail",
       "3",
-      "★★★★★",
+      "★★★★",
       "JavaScript, sandbox escape",
       "[Satoooon](https://x.com/Satoooon1024)",
     ],
