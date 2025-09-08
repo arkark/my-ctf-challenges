@@ -4,6 +4,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ### ToC
 
+- [ASIS CTF Quals 2025](#asis-ctf-quals-2025)
 - [IERAE CTF 2025](#ierae-ctf-2025)
 - [AlpacaHack Round 11 (Web)](#alpacahack-round-11-web)
 - [SECCON CTF 13 Finals](#seccon-ctf-13-finals)
@@ -18,6 +19,14 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## ASIS CTF Quals 2025
+
+Links: [CTFtime](https://ctftime.org/event/2612/)
+
+|Challenge|Category|Solved|Difficulty|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[pure-leak](challenges/202509_ASIS_CTF_Quals_2025/web/pure-leak)|web|2|★★★★|[link](https://blog.arkark.dev/2025/09/08/asisctf-quals)|quirks mode, CSS injection|
 
 ## IERAE CTF 2025
 

