@@ -4,6 +4,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ### ToC
 
+- [ICC TOKYO 2025](#icc-tokyo-2025)
 - [ASIS CTF Quals 2025](#asis-ctf-quals-2025)
 - [IERAE CTF 2025](#ierae-ctf-2025)
 - [AlpacaHack Round 11 (Web)](#alpacahack-round-11-web)
@@ -19,6 +20,14 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## ICC TOKYO 2025
+
+Links: [Website](https://icctokyo2025.nisc.go.jp/) / [Official Repository](https://github.com/ctfplatform/icc-2025-jeopardy-problems)
+
+|Challenge|Category|Solved / 8|Difficulty|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[XSP-Leak](challenges/202511_ICC_TOKYO_2025/web/xsp-leak)|web|4|★★★|[link](challenges/202511_ICC_TOKYO_2025/web/xsp-leak/solution/README.md)|XSLeak|
 
 ## ASIS CTF Quals 2025
 

@@ -1,0 +1,8 @@
+{
+  "name": "solver",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "fastify": "^5.3.3"
+  }
+}

