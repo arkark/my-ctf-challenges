@@ -4,6 +4,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ### ToC
 
+- [SECCON CTF 14 Quals](#seccon-ctf-14-quals)
 - [ICC TOKYO 2025](#icc-tokyo-2025)
 - [ASIS CTF Quals 2025](#asis-ctf-quals-2025)
 - [IERAE CTF 2025](#ierae-ctf-2025)
@@ -20,6 +21,18 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## SECCON CTF 14 Quals
+
+Links: [CTFtime](https://ctftime.org/event/2862/)
+
+|Challenge|Category|Solved|Difficulty|Writeup|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[framed-xss](challenges/202512_SECCON_CTF_14_Quals/web/framed-xss)|web|7|★★★★|-|Chrome, request initiator|
+|[impossible-leak](challenges/202512_SECCON_CTF_14_Quals/web/impossible-leak)|web|1|★★★★★|[link](https://blog.arkark.dev/2025/12/26/etag-length-leak)|XSLeak, ETag|
+|[broken-json](challenges/202512_SECCON_CTF_14_Quals/jail/broken-json)|jail|166|★|-|jsjail|
+|[excepython](challenges/202512_SECCON_CTF_14_Quals/jail/excepython)|jail|69|★★|-|pyjail|
+|[proxy-chain](challenges/202512_SECCON_CTF_14_Quals/jail/proxy-chain)|jail|3|★★★★|-|jsjail, Proxy|
 
 ## ICC TOKYO 2025
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Notes</h1>
+    <form id="create" action="/new" method="post">
+      <div>
+        <input type="text" name="note" required />
+        <input type="submit" value="Create" />
+      </div>
+    </form>
+    <ul>
+      <% notes.forEach(note => {%>
+        <li><%= note %></li>
+      <% }); %>
+    </ul>
+    <form action="/" method="get">
+      <div>
+        <input type="text" name="query" />
+        <input type="submit" value="Search" />
+      </div>
+    </form>
+  </body>
+</html>
