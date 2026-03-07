@@ -4,6 +4,7 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 
 ### ToC
 
+- [SECCON CTF 14 Finals](#seccon-ctf-14-finals)
 - [SECCON CTF 14 Quals](#seccon-ctf-14-quals)
 - [ICC TOKYO 2025](#icc-tokyo-2025)
 - [ASIS CTF Quals 2025](#asis-ctf-quals-2025)
@@ -21,6 +22,18 @@ A repository for CTF challenges I created. Have fun playing CTFs :sunglasses:
 - [SECCON CTF 2022 Finals](#seccon-ctf-2022-finals)
 - [SECCON CTF 2022 Quals](#seccon-ctf-2022-quals)
 - [SECCON CTF 2021](#seccon-ctf-2021)
+
+## SECCON CTF 14 Finals
+
+Links: [CTFtime (International)](https://ctftime.org/event/3106) / [CTFtime (Domestic)](https://ctftime.org/event/3107)
+
+|Challenge|Category|Solved / 9<br>(International)|Solved / 9<br>(Domestic)|Difficulty|Keywords|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[Warpup](challenges/202603_SECCON_CTF_14_Finals/web/warpup)|web|9|9|★|stream|
+|[DOMDOMDOMPurify](challenges/202603_SECCON_CTF_14_Finals/web/domdomdom)|web|9|9|★|DOMPurify, mXSS|
+|[Shadow CSS](challenges/202603_SECCON_CTF_14_Finals/web/shadow-css)|web|1|0|★★★|Firefox, Link|
+|[Slay the Note](challenges/202603_SECCON_CTF_14_Finals/web/slay-the-note)|web|0|0|★★★|cookie parser|
+|[increasing](challenges/202603_SECCON_CTF_14_Finals/jail/increasing)|jail|4|4|★★|pyjail|
 
 ## SECCON CTF 14 Quals
 

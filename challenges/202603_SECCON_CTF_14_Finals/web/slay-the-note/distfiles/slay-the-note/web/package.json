@@ -1,0 +1,11 @@
+{
+  "name": "web",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@koa/bodyparser": "^6.1.0",
+    "@koa/router": "^15.3.0",
+    "koa": "^3.1.1",
+    "sanitize-html": "^2.17.0"
+  }
+}

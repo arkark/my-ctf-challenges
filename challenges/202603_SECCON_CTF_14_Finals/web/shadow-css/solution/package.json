@@ -1,0 +1,8 @@
+{
+  "name": "solution",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "fastify": "^5.7.2"
+  }
+}

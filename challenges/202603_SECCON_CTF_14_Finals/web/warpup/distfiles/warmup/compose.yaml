@@ -1,0 +1,13 @@
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    init: true
+    environment:
+      - FLAG=SECCON{REDACTED}
+  proxy:
+    build: ./proxy
+    restart: unless-stopped
+    init: true
+    ports:
+      - 3000:3000

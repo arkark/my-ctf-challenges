@@ -1,0 +1,13 @@
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    init: true
+    environment:
+      - FLAG=SECCON{Wha7_ch4racter_did_you_use_7o_s0lv3_1t??}
+  proxy:
+    build: ./proxy
+    restart: unless-stopped
+    init: true
+    ports:
+      - 3000:3000

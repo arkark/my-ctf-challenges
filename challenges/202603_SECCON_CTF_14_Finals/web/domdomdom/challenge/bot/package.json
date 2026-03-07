@@ -1,0 +1,11 @@
+{
+  "name": "bot",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "puppeteer": "^24.37.2"
+  }
+}

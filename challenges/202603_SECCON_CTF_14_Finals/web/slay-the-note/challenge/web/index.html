@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simpledotcss/2.3.7/simple.min.css"
+      integrity="sha512-taVA0VISClRMNshgWnlrG4lcEYSjwpgpI8vaoT0zGoPf9c74DA95SXMngcgjaWTrEsUbKmfKqmQ7toiXNc2l+A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      nonce="{{NONCE}}"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Notes 🐍</h1>
+      <form id="create" action="/new" method="post">
+        <div>
+          <input type="text" name="note" required />
+          <input type="submit" value="Create" />
+        </div>
+      </form>
+      <section id="notes"></section>
+    </main>
+    <script nonce="{{NONCE}}">
+      fetch("/notes")
+        .then((r) => r.json())
+        .then(
+          (notes) =>
+            (document.getElementById("notes").innerHTML = notes.join("")),
+        );
+    </script>
+  </body>
+</html>
